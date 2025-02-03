@@ -23,7 +23,7 @@ a:hover {
 .navbar-brand {
   font-weight: 600;
   font-size: 1.4rem;
-  color: #0099CC; /* Darker primary color */
+  color: #ffffff; /* Change to white */
 }
 
 .navbar-brand:hover {
@@ -32,6 +32,7 @@ a:hover {
 
 .navbar-brand img {
   height: 40px; /* Adjust the height as needed */
+  /* Remove filter to keep the original color */
 }
 
 .nav-link {
@@ -90,6 +91,16 @@ a:hover {
   padding: 0 1rem;
 }
 
+.hero-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
 .hero::before {
   content: "";
   position: absolute;
@@ -104,27 +115,21 @@ a:hover {
   z-index: 1;
 }
 
-.hero img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 0; /* Ensure this is lower than the overlay */
-}
-
 .hero .container {
   position: relative;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.hero .container img {
-  height: 80px; /* Increase the height */
+.hero-logo {
+  height: 80px;
   max-width: 100%;
-  width: auto; /* Ensure the width is auto to maintain aspect ratio */
+  width: auto;
   display: block;
-  margin: 0 auto 1rem; /* Center the logo and add margin below */
+  margin: 0 auto 1rem;
+  filter: brightness(0) invert(1); /* Make the logo white */
 }
 
 .hero h1 {
@@ -150,6 +155,10 @@ a:hover {
 .btn-primary:hover {
   background-color: #00B3A0; /* Darker accent color */
   transform: translateY(-3px);
+}
+
+.btn-primary i {
+  margin-right: 0.5rem;
 }
 
 /* Sections */
@@ -226,17 +235,19 @@ footer {
 .footer-nav a {
   color: #0099CC; /* Darker primary color */
   font-weight: 500;
+  transition: color 0.3s ease; /* Add transition for smooth color change */
 }
 
 .footer-nav a:hover {
-  color: #00B3A0; /* Darker accent color */
+  color: #00B3A0 !important; /* Darker accent color */
 }
 
 .footer-social a {
   font-size: 1.25rem;
   color: #0099CC; /* Darker primary color */
+  transition: color 0.3s ease; /* Add transition for smooth color change */
 }
 
 .footer-social a:hover {
-  color: #00B3A0; /* Darker accent color */
+  color: #00B3A0 !important; /* Darker accent color */
 }
