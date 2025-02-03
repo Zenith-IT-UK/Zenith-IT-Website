@@ -20,23 +20,35 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <!-- Font Awesome for social icons -->
+    <!-- Font Awesome for social icons (preload version) -->
     <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-papNM2HFeZsIlzSDEI9LCkOQjsaLq/FnqRyMlM+ZZ08cJIOZxQX6abS13vAw8+3H6hZyg/Ipz5Ac8+Ga/9Nqjg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
     />
+    <noscript>
+      <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      />
+    </noscript>
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/main.css" />
+    <!-- Inline styles to set footer link hover color -->
+    <style>
+      footer a.text-white:hover {
+        color: #ffcc00; /* Change to your desired hover color */
+        text-decoration: none;
+      }
+    </style>
   </head>
   <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main Navigation">
       <div class="container">
         <a class="navbar-brand" href="index.html">
-          <img src="assets/images/logo.png" alt="Zenith IT Logo" height="40">
+          <img src="assets/images/logo.PNG" alt="Zenith IT Logo" height="40" />
         </a>
         <button
           class="navbar-toggler"
@@ -54,49 +66,49 @@
             <!-- Home -->
             <li class="nav-item">
               <a class="nav-link" href="index.html">
-                <i class="fas fa-home"></i> Home
+                <i class="fa-solid fa-home"></i> Home
               </a>
             </li>
             <!-- About Us -->
             <li class="nav-item">
               <a class="nav-link" href="about.html">
-                <i class="fas fa-info-circle"></i> About Us
+                <i class="fa-solid fa-info-circle"></i> About Us
               </a>
             </li>
             <!-- Services -->
             <li class="nav-item">
               <a class="nav-link" href="services.html">
-                <i class="fas fa-cogs"></i> Services
+                <i class="fa-solid fa-cogs"></i> Services
               </a>
             </li>
             <!-- Solutions -->
             <li class="nav-item">
               <a class="nav-link" href="solutions.html">
-                <i class="fas fa-lightbulb"></i> Solutions
+                <i class="fa-solid fa-lightbulb"></i> Solutions
               </a>
             </li>
             <!-- Case Studies -->
             <li class="nav-item">
               <a class="nav-link" href="case-studies.html">
-                <i class="fas fa-briefcase"></i> Case Studies
+                <i class="fa-solid fa-briefcase"></i> Case Studies
               </a>
             </li>
             <!-- Blog -->
             <li class="nav-item">
               <a class="nav-link" href="blog.html">
-                <i class="fas fa-blog"></i> Blog
+                <i class="fa-solid fa-blog"></i> Blog
               </a>
             </li>
             <!-- Careers -->
             <li class="nav-item">
               <a class="nav-link" href="careers.html">
-                <i class="fas fa-user-tie"></i> Careers
+                <i class="fa-solid fa-user-tie"></i> Careers
               </a>
             </li>
             <!-- Contact -->
             <li class="nav-item">
               <a class="nav-link" href="contact.html">
-                <i class="fas fa-envelope"></i> Contact
+                <i class="fa-solid fa-envelope"></i> Contact
               </a>
             </li>
           </ul>
@@ -108,12 +120,20 @@
     <main>
       <!-- Hero Section -->
       <header class="hero text-center py-5">
-        <img src="assets/images/hero.jpg" alt="Hero Background Image" class="hero-background">
+        <img
+          src="assets/images/hero.jpg"
+          alt="Hero Background Image"
+          class="hero-background"
+        />
         <div class="container">
-          <img src="assets/images/logo.png" alt="Zenith IT Logo" class="hero-logo mb-4">
+          <img
+            src="assets/images/logo.PNG"
+            alt="Zenith IT Logo"
+            class="hero-logo mb-4"
+          />
           <p class="lead">Innovative IT Consultancy for a Digital Future</p>
           <a href="#contact" class="btn btn-primary">
-            <i class="fas fa-paper-plane"></i> Get in Touch
+            <i class="fa-solid fa-paper-plane"></i> Get in Touch
           </a>
         </div>
       </header>
@@ -123,13 +143,22 @@
         <div class="container">
           <h2>About Us</h2>
           <p>
-            At Zenith IT, we blend technology with innovation to deliver top-tier IT consultancy services from our base in Birmingham, UK. Our dedicated team provides cutting-edge solutions designed to empower your business in a digital age.
+            At Zenith IT, we blend technology with innovation to deliver top-tier
+            IT consultancy services from our base in Birmingham, UK. Our dedicated
+            team provides cutting-edge solutions designed to empower your business
+            in a digital age.
           </p>
           <p>
-            Our mission is to help businesses navigate the complexities of the digital world by providing expert guidance and support. We believe in building long-term partnerships with our clients, ensuring that their IT infrastructure is always aligned with their strategic goals.
+            Our mission is to help businesses navigate the complexities of the digital
+            world by providing expert guidance and support. We believe in building
+            long-term partnerships with our clients, ensuring that their IT infrastructure
+            is always aligned with their strategic goals.
           </p>
           <p>
-            With a team of experienced professionals, we offer a wide range of services including IT strategy consulting, cloud solutions, and managed IT services. Our approach is tailored to meet the unique needs of each client, ensuring that they receive the best possible solutions for their business.
+            With a team of experienced professionals, we offer a wide range of services
+            including IT strategy consulting, cloud solutions, and managed IT services.
+            Our approach is tailored to meet the unique needs of each client, ensuring that
+            they receive the best possible solutions for their business.
           </p>
         </div>
       </section>
@@ -150,10 +179,14 @@
                 <div class="card-body">
                   <h4 class="card-title">IT Strategy Consulting</h4>
                   <p class="card-text">
-                    Craft and execute IT strategies that align perfectly with your business goals.
+                    Craft and execute IT strategies that align perfectly with your
+                    business goals.
                   </p>
                   <p class="card-text">
-                    Our IT strategy consulting services help you develop a comprehensive plan that supports your business objectives. We work closely with you to understand your needs and provide tailored solutions that drive growth and efficiency.
+                    Our IT strategy consulting services help you develop a comprehensive
+                    plan that supports your business objectives. We work closely with you
+                    to understand your needs and provide tailored solutions that drive growth
+                    and efficiency.
                   </p>
                 </div>
               </div>
@@ -169,10 +202,14 @@
                 <div class="card-body">
                   <h4 class="card-title">Cloud Solutions</h4>
                   <p class="card-text">
-                    Seamlessly transition to cloud-based systems for enhanced scalability and security.
+                    Seamlessly transition to cloud-based systems for enhanced scalability and
+                    security.
                   </p>
                   <p class="card-text">
-                    Our cloud solutions enable you to leverage the power of the cloud to improve your business operations. We offer a range of services including cloud migration, management, and optimization to ensure that your cloud infrastructure is secure and efficient.
+                    Our cloud solutions enable you to leverage the power of the cloud to improve
+                    your business operations. We offer a range of services including cloud
+                    migration, management, and optimization to ensure that your cloud infrastructure
+                    is secure and efficient.
                   </p>
                 </div>
               </div>
@@ -181,7 +218,7 @@
             <div class="col-md-4">
               <div class="card service-card h-100 p-3">
                 <img
-                  src="assets/images/service3.jpg "
+                  src="assets/images/service3.jpg"
                   class="card-img-top"
                   alt="Managed IT Services"
                 />
@@ -191,7 +228,9 @@
                     Enjoy peace of mind with our comprehensive, proactive IT support services.
                   </p>
                   <p class="card-text">
-                    Our managed IT services provide you with the support you need to keep your IT infrastructure running smoothly. We offer proactive monitoring, maintenance, and support to ensure that your systems are always up and running.
+                    Our managed IT services provide you with the support you need to keep your IT
+                    infrastructure running smoothly. We offer proactive monitoring, maintenance,
+                    and support to ensure that your systems are always up and running.
                   </p>
                 </div>
               </div>
@@ -205,7 +244,9 @@
         <div class="container">
           <h2>Contact Us</h2>
           <p>
-            We would love to hear from you! Whether you have a question about our services, need support, or want to discuss a potential project, our team is here to help. Please fill out the form below and we will get back to you as soon as possible.
+            We would love to hear from you! Whether you have a question about our services,
+            need support, or want to discuss a potential project, our team is here to help.
+            Please fill out the form below and we will get back to you as soon as possible.
           </p>
           <div class="row">
             <div class="col-md-6">
@@ -246,7 +287,7 @@
                   ></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary w-100">
-                  <i class="fas fa-paper-plane"></i> Send Message
+                  <i class="fa-solid fa-paper-plane"></i> Send Message
                 </button>
               </form>
             </div>
@@ -295,18 +336,18 @@
               rel="noopener"
               aria-label="LinkedIn"
             >
-              <i class="fab fa-linkedin fa-lg"></i>
+              <i class="fa-brands fa-linkedin fa-lg"></i>
             </a>
           </li>
           <li class="list-inline-item">
             <a
               class="text-white"
-              href="https://www.twitter.com"
+              href="https://www.x.com"
               target="_blank"
               rel="noopener"
-              aria-label="Twitter"
+              aria-label="X"
             >
-              <i class="fab fa-twitter fa-lg"></i>
+              <i class="fa-brands fa-x-twitter fa-lg"></i>
             </a>
           </li>
           <li class="list-inline-item">
@@ -317,7 +358,7 @@
               rel="noopener"
               aria-label="Facebook"
             >
-              <i class="fab fa-facebook fa-lg"></i>
+              <i class="fa-brands fa-facebook fa-lg"></i>
             </a>
           </li>
         </ul>
@@ -331,14 +372,14 @@
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQSsmzhQpNGcHFCucuALZm8ZWiHpbu1FA"></script>
     <script>
       function initMap() {
-        var birmingham = {lat: 52.4862, lng: -1.8904};
-        var map = new google.maps.Map(document.getElementById('map'), {
+        var birmingham = { lat: 52.4862, lng: -1.8904 };
+        var map = new google.maps.Map(document.getElementById("map"), {
           zoom: 10,
-          center: birmingham
+          center: birmingham,
         });
         var marker = new google.maps.Marker({
           position: birmingham,
-          map: map
+          map: map,
         });
       }
       window.onload = initMap;
