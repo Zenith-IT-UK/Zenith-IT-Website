@@ -35,11 +35,17 @@
     </noscript>
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/main.css" />
-    <!-- Inline styles to set footer link hover color -->
+    <!-- Inline styles to set footer link hover color and mobile footer font size -->
     <style>
       footer a.text-white:hover {
         color: #ffcc00; /* Change to your desired hover color */
         text-decoration: none;
+      }
+      /* On mobile devices, reduce the font size of footer nav links */
+      @media (max-width: 576px) {
+        footer ul.list-inline li a {
+          font-size: 0.8rem;
+        }
       }
     </style>
   </head>
@@ -110,6 +116,58 @@
               <a class="nav-link" href="contact.html">
                 <i class="fa-solid fa-envelope"></i> Contact
               </a>
+            </li>
+            <!-- Legal Menu for Desktop (visible on lg and up) -->
+            <li class="nav-item dropdown d-none d-lg-block">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                id="legalDropdownDesktop"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Legal <i class="fa-solid fa-chevron-down ms-2"></i>
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="legalDropdownDesktop">
+                <li>
+                  <a class="dropdown-item" href="privacy-policy.html">
+                    <i class="fa-solid fa-user-secret me-2"></i>Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="terms-of-service.html">
+                    <i class="fa-solid fa-file-contract me-2"></i>Terms of Service
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!-- Legal Menu for Mobile (visible below lg) -->
+            <li class="nav-item d-block d-lg-none">
+              <a
+                class="nav-link"
+                data-bs-toggle="collapse"
+                href="#legalCollapse"
+                role="button"
+                aria-expanded="false"
+                aria-controls="legalCollapse"
+              >
+                Legal <i class="fa-solid fa-chevron-down ms-2"></i>
+              </a>
+              <div class="collapse" id="legalCollapse">
+                <ul class="navbar-nav ps-3">
+                  <li class="nav-item">
+                    <a class="nav-link" href="privacy-policy.html">
+                      <i class="fa-solid fa-user-secret me-2"></i>Privacy Policy
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="terms-of-service.html">
+                      <i class="fa-solid fa-file-contract me-2"></i>Terms of Service
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
         </div>
@@ -299,6 +357,10 @@
     <!-- Footer -->
     <footer class="py-4 bg-dark text-white">
       <div class="container text-center">
+        <!-- White Logo Added -->
+        <div class="mb-3">
+          <img src="assets/images/logo-white.PNG" alt="Zenith IT White Logo" style="max-width: 150px;" />
+        </div>
         <!-- Footer Navigation -->
         <ul class="list-inline mb-2">
           <li class="list-inline-item">
@@ -324,6 +386,13 @@
           </li>
           <li class="list-inline-item">
             <a class="text-white text-decoration-none" href="contact.html">Contact</a>
+          </li>
+          <!-- Policy Pages Added to Footer Nav -->
+          <li class="list-inline-item">
+            <a class="text-white text-decoration-none" href="privacy-policy.html">Privacy Policy</a>
+          </li>
+          <li class="list-inline-item">
+            <a class="text-white text-decoration-none" href="terms-of-service.html">Terms of Service</a>
           </li>
         </ul>
         <!-- Social Links -->
