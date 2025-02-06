@@ -20,7 +20,7 @@ html {
 }
 
 /* Navigation */
-/* Updated for a transparent, blurred navbar effect */
+/* Navbar with a semi-transparent white background and blur effect */
 .navbar {
   background-color: rgba(255, 255, 255, 0.6); /* Slightly transparent white */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
@@ -31,7 +31,7 @@ html {
 .navbar-brand {
   font-weight: 600;
   font-size: 1.4rem;
-  color: #ffffff; /* Change to white */
+  color: #ffffff; /* If text-based logo */
 }
 
 .navbar-brand:hover {
@@ -39,14 +39,13 @@ html {
 }
 
 .navbar-brand img {
-  height: 40px; /* Adjust the height as needed */
-  /* Remove filter to keep the original color */
+  height: 40px; /* Adjust as needed */
 }
 
 .nav-link {
   margin-right: 1rem;
   font-weight: 500;
-  color: #333; /* Default color */
+  color: #333; /* Default text color */
 }
 
 .nav-link:hover {
@@ -65,23 +64,20 @@ html {
 }
 
 .navbar-toggler-icon {
-  /* Custom SVG hamburger icon using the primary color (#0099CC) */
   background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%230099CC' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 
 /* Mobile Menu (Collapsed Navbar) Styling */
 @media (max-width: 992px) {
   .navbar-collapse {
-    background-color: #ffffff; /* Same as navbar background */
+    background-color: rgba(255, 255, 255, 0.7); /* More opaque for mobile menu */
     padding: 1rem;
     border-radius: 5px;
     margin-top: 0.5rem;
   }
-
   .navbar-nav {
     text-align: center;
   }
-
   .navbar-nav .nav-item {
     margin: 0.5rem 0;
   }
@@ -116,10 +112,7 @@ html {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(
-      rgba(0,153,204,0.7),
-      rgba(0,179,160,0.7)
-    );
+  background: linear-gradient(rgba(0,153,204,0.7), rgba(0,179,160,0.7));
   z-index: 1;
 }
 
@@ -137,7 +130,7 @@ html {
   width: auto;
   display: block;
   margin: 0 auto 1rem;
-  filter: brightness(0) invert(1); /* Make the logo white */
+  filter: brightness(0) invert(1); /* Invert for a white logo effect */
 }
 
 .hero h1 {
@@ -151,6 +144,7 @@ html {
   margin-bottom: 2rem;
 }
 
+/* Buttons */
 .btn-primary {
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
@@ -188,7 +182,7 @@ section h2::after {
   bottom: -5px;
   width: 50%;
   height: 3px;
-  background-color: #0099CC; /* Darker primary color for underline */
+  background-color: #0099CC; /* Underline color */
 }
 
 /* Cards for Services */
@@ -228,6 +222,7 @@ footer {
   padding: 2rem 0;
   text-align: center;
   color: #6c757d;
+  font-size: 0.8rem; /* Overall footer text size */
 }
 
 .footer-nav,
@@ -243,7 +238,7 @@ footer {
 .footer-nav a {
   color: #0099CC; /* Darker primary color */
   font-weight: 500;
-  transition: color 0.3s ease; /* Add transition for smooth color change */
+  transition: color 0.3s ease;
 }
 
 .footer-nav a:hover {
@@ -253,7 +248,7 @@ footer {
 .footer-social a {
   font-size: 1.25rem;
   color: #0099CC; /* Darker primary color */
-  transition: color 0.3s ease; /* Add transition for smooth color change */
+  transition: color 0.3s ease;
 }
 
 .footer-social a:hover {

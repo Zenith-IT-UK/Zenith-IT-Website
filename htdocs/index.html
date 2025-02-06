@@ -35,16 +35,40 @@
     </noscript>
     <!-- Main CSS -->
     <link rel="stylesheet" href="css/main.css" />
-    <!-- Inline styles to set footer link hover color and mobile footer font size -->
+    <!-- Inline Styles -->
     <style>
+      /* Footer link hover color */
       footer a.text-white:hover {
-        color: #ffcc00; /* Change to your desired hover color */
+        color: #ffcc00;
         text-decoration: none;
       }
-      /* On mobile devices, reduce the font size of footer nav links */
+      /* Reduce overall footer text size */
+      footer {
+        font-size: 0.8rem;
+      }
+      /* Ensure footer nav links inherit the footer font size */
+      footer ul.list-inline li a {
+        font-size: inherit;
+      }
+      /* Mobile Menu (Collapsed Navbar) Styling */
+      @media (max-width: 992px) {
+        .navbar-collapse {
+          background-color: rgba(255, 255, 255, 0.9); /* More opaque for mobile menu */
+          padding: 1rem;
+          border-radius: 5px;
+          margin-top: 0.5rem;
+        }
+        .navbar-nav {
+          text-align: center;
+        }
+        .navbar-nav .nav-item {
+          margin: 0.5rem 0;
+        }
+      }
+      /* Mobile Footer Navigation: if needed, you can further adjust via media queries */
       @media (max-width: 576px) {
         footer ul.list-inline li a {
-          font-size: 0.8rem;
+          font-size: inherit;
         }
       }
     </style>
@@ -127,7 +151,7 @@
                 data-bs-toggle="dropdown"
                 aria-expanded="false"
               >
-                Legal
+                Legal <i class="fa-solid fa-chevron-down ms-2"></i>
               </a>
               <ul class="dropdown-menu" aria-labelledby="legalDropdownDesktop">
                 <li>
@@ -152,7 +176,7 @@
                 aria-expanded="false"
                 aria-controls="legalCollapse"
               >
-                Legal
+                Legal <i class="fa-solid fa-chevron-down ms-2"></i>
               </a>
               <div class="collapse" id="legalCollapse">
                 <ul class="navbar-nav ps-3">
