@@ -35,69 +35,33 @@
     </noscript>
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/css/main.css" />
-    <!-- Inline styles to set footer link hover color and mobile footer font size -->
-    <style>
-      footer a.text-white:hover {
-        color: #ffcc00; /* Change to your desired hover color */
-        text-decoration: none;
-      }
-      /* Reduce overall footer text size */
-      footer {
-        font-size: 0.8rem;
-      }
-      /* Ensure footer nav links inherit the footer font size */
-      footer ul.list-inline li a {
-        font-size: inherit;
-      }
-      /* Mobile Menu (Collapsed Navbar) Styling */
-      @media (max-width: 992px) {
-        .navbar-collapse {
-          background-color: rgba(255, 255, 255, 0.9); /* More opaque for mobile menu */
-          padding: 1rem;
-          border-radius: 5px;
-          margin-top: 0.5rem;
-        }
-        .navbar-nav {
-          text-align: center;
-        }
-        .navbar-nav .nav-item {
-          margin: 0.5rem 0;
-        }
-      }
-      /* On mobile devices, reduce the font size of footer nav links */
-      @media (max-width: 576px) {
-        footer ul.list-inline li a {
-          font-size: 0.8rem;
-        }
-      }
-    </style>
 
     <!-- Favicon and Apple Touch Icons -->
-    <link rel="apple-touch-icon" sizes="57x57" href="assets/images/icons/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="assets/images/icons/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/icons/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="assets/images/icons/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/icons/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="assets/images/icons/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="assets/images/icons/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="assets/images/icons/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-icon-180x180.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/images/icons/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/images/icons/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/icons/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/images/icons/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/icons/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/images/icons/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/images/icons/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/images/icons/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-icon-180x180.png" />
 
-    <link rel="icon" type="image/png" sizes="192x192"  href="assets/images/icons/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32"    href="assets/images/icons/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96"    href="assets/images/icons/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16"    href="assets/images/icons/favicon-16x16.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/icons/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/icons/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png" />
 
-    <link rel="manifest" href="assets/images/icons/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="assets/images/icons/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="manifest" href="assets/images/icons/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="assets/images/icons/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
   </head>
   <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main Navigation">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="#hero">
           <img src="assets/images/logo.PNG" alt="Zenith IT Logo" height="40" />
         </a>
         <button
@@ -113,28 +77,22 @@
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
-            <!-- Home -->
+            <!-- Home (anchor to hero section) -->
             <li class="nav-item">
-              <a class="nav-link" href="index.html">
-                <i class="fa-solid fa-home"></i> Home
+              <a class="nav-link" href="#hero">
+                <i class="fa-solid fa-house"></i> Home
               </a>
             </li>
             <!-- About Us -->
             <li class="nav-item">
-              <a class="nav-link" href="about.html">
+              <a class="nav-link" href="#about">
                 <i class="fa-solid fa-info-circle"></i> About Us
               </a>
             </li>
             <!-- Services -->
             <li class="nav-item">
-              <a class="nav-link" href="services.html">
+              <a class="nav-link" href="#services">
                 <i class="fa-solid fa-cogs"></i> Services
-              </a>
-            </li>
-            <!-- Careers -->
-            <li class="nav-item">
-              <a class="nav-link" href="careers.html">
-                <i class="fa-solid fa-user-tie"></i> Careers
               </a>
             </li>
             <!-- Contact -->
@@ -202,8 +160,8 @@
 
     <!-- Main Content -->
     <main>
-      <!-- Hero Section -->
-      <header class="hero text-center py-5">
+      <!-- Hero Section (now with an anchor id) -->
+      <header id="hero" class="hero text-center py-5">
         <img
           src="assets/images/hero.jpg"
           alt="Hero Background Image"
@@ -303,8 +261,8 @@
           </div>
         </div>
       </section>
-      <!-- Note: The Solutions, Case Studies, and Blog sections have been removed -->
-            <!-- Contact Section -->
+      
+      <!-- Contact Section -->
       <section id="contact" class="py-5">
         <div class="container">
           <h2>Contact Us</h2>
@@ -367,19 +325,22 @@
         <!-- Footer Navigation -->
         <ul class="list-inline mb-2">
           <li class="list-inline-item">
-            <a class="text-white text-decoration-none" href="index.html">Home</a>
+            <a class="text-white text-decoration-none" href="#hero">Home</a>
           </li>
           <li class="list-inline-item">
-            <a class="text-white text-decoration-none" href="about.html">About Us</a>
+            <a class="text-white text-decoration-none" href="#about">About Us</a>
           </li>
           <li class="list-inline-item">
-            <a class="text-white text-decoration-none" href="services.html">Services</a>
+            <a class="text-white text-decoration-none" href="#services">Services</a>
           </li>
           <li class="list-inline-item">
-            <a class="text-white text-decoration-none" href="careers.html">Careers</a>
+            <a class="text-white text-decoration-none" href="#contact">Contact</a>
           </li>
           <li class="list-inline-item">
-            <a class="text-white text-decoration-none" href="contact.html">Contact</a>
+            <a class="text-white text-decoration-none" href="privacy-policy.html">Privacy Policy</a>
+          </li>
+          <li class="list-inline-item">
+            <a class="text-white text-decoration-none" href="terms-of-service.html">Terms of Service</a>
           </li>
         </ul>
         <!-- Social Links -->
