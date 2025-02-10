@@ -24,8 +24,8 @@ html {
 .navbar {
   background-color: rgba(255, 255, 255, 0.6); /* Slightly transparent white */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(5px);
 }
 
 .navbar-brand {
@@ -343,4 +343,11 @@ footer a {
   footer ul.list-inline li a {
     font-size: 0.8rem;
   }
+}
+
+/* Add your custom styles here */
+
+.map-container {
+  height: 300px;
+  margin-bottom: 2rem;
 }
