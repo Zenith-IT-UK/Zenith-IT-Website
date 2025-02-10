@@ -6,7 +6,7 @@
     <title>Zenith IT - Modern IT Consultancy in Birmingham, UK</title>
     <meta
       name="description"
-      content="Zenith IT is a leading IT consultancy based in Birmingham, UK, offering innovative IT strategy, cloud solutions, and managed IT services."
+      content="Zenith IT is a solo IT consultancy based in Birmingham, UK, delivering innovative IT strategy, cloud solutions, and managed IT services with a personal touch."
     />
     <!-- Bootstrap CSS -->
     <link
@@ -20,22 +20,13 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <!-- Font Awesome for social icons (preload version) -->
+    <!-- Font Awesome for social icons -->
     <link
-      rel="preload"
+      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      as="style"
-      onload="this.onload=null;this.rel='stylesheet'"
     />
-    <noscript>
-      <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-      />
-    </noscript>
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/css/main.css" />
-
     <!-- Favicon and Apple Touch Icons -->
     <link rel="apple-touch-icon" sizes="57x57" href="assets/images/icons/apple-icon-57x57.png" />
     <link rel="apple-touch-icon" sizes="60x60" href="assets/images/icons/apple-icon-60x60.png" />
@@ -46,12 +37,10 @@
     <link rel="apple-touch-icon" sizes="144x144" href="assets/images/icons/apple-icon-144x144.png" />
     <link rel="apple-touch-icon" sizes="152x152" href="assets/images/icons/apple-icon-152x152.png" />
     <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-icon-180x180.png" />
-
     <link rel="icon" type="image/png" sizes="192x192" href="assets/images/icons/android-icon-192x192.png" />
     <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="96x96" href="assets/images/icons/favicon-96x96.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png" />
-
     <link rel="manifest" href="assets/images/icons/manifest.json" />
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="assets/images/icons/ms-icon-144x144.png" />
@@ -83,10 +72,10 @@
                 <i class="fa-solid fa-house"></i> Home
               </a>
             </li>
-            <!-- About Us -->
+            <!-- About Me -->
             <li class="nav-item">
               <a class="nav-link" href="#about">
-                <i class="fa-solid fa-info-circle"></i> About Us
+                <i class="fa-solid fa-info-circle"></i> About Me
               </a>
             </li>
             <!-- Services -->
@@ -101,16 +90,9 @@
                 <i class="fa-solid fa-envelope"></i> Contact
               </a>
             </li>
-            <!-- Legal Menu for Desktop (visible on lg and up) -->
+            <!-- Legal Dropdown for Desktop -->
             <li class="nav-item dropdown d-none d-lg-block">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="legalDropdownDesktop"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
+              <a class="nav-link dropdown-toggle" href="#" id="legalDropdownDesktop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Legal
               </a>
               <ul class="dropdown-menu" aria-labelledby="legalDropdownDesktop">
@@ -126,16 +108,9 @@
                 </li>
               </ul>
             </li>
-            <!-- Legal Menu for Mobile (visible below lg) -->
+            <!-- Legal Dropdown for Mobile -->
             <li class="nav-item d-block d-lg-none">
-              <a
-                class="nav-link"
-                data-bs-toggle="collapse"
-                href="#legalCollapse"
-                role="button"
-                aria-expanded="false"
-                aria-controls="legalCollapse"
-              >
+              <a class="nav-link" data-bs-toggle="collapse" href="#legalCollapse" role="button" aria-expanded="false" aria-controls="legalCollapse">
                 Legal
               </a>
               <div class="collapse" id="legalCollapse">
@@ -270,6 +245,13 @@
             <div class="col-md-6">
               <h3>My Location</h3>
               <div id="map" style="height: 300px; margin-bottom: 2rem;"></div>
+              <h3>Contact Details</h3>
+              <p><strong>Phone:</strong> +44 1234 567890</p>
+              <p>
+                <strong>Email:</strong>
+                <a href="mailto:info@zenithit.co.uk">info@zenithit.co.uk</a>
+              </p>
+              <p><strong>Address:</strong> 123 Innovation Way, Birmingham, B1 1AA, UK</p>
             </div>
             <div class="col-md-6">
               <h3>Send Me a Message</h3>
@@ -324,16 +306,16 @@
         <!-- Footer Navigation -->
         <ul class="list-inline mb-2">
           <li class="list-inline-item">
-            <a class="text-white text-decoration-none" href="#hero">Home</a>
+            <a class="text-white text-decoration-none" href="index.html#hero">Home</a>
           </li>
           <li class="list-inline-item">
-            <a class="text-white text-decoration-none" href="#about">About Me</a>
+            <a class="text-white text-decoration-none" href="index.html#about">About Me</a>
           </li>
           <li class="list-inline-item">
-            <a class="text-white text-decoration-none" href="#services">Services</a>
+            <a class="text-white text-decoration-none" href="index.html#services">Services</a>
           </li>
           <li class="list-inline-item">
-            <a class="text-white text-decoration-none" href="#contact">Contact</a>
+            <a class="text-white text-decoration-none" href="index.html#contact">Contact</a>
           </li>
           <li class="list-inline-item">
             <a class="text-white text-decoration-none" href="privacy-policy.html">Privacy Policy</a>
