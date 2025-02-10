@@ -1,0 +1,7 @@
+User-agent: *
+Disallow: /assets/
+Disallow: /cgi-bin/
+Disallow: /admin/
+Allow: /
+
+Sitemap: https://www.zenith-it.co.uk/sitemap.xml
