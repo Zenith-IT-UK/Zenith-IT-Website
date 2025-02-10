@@ -73,10 +73,10 @@
     </style>
   </head>
   <body>
-    <!-- Navigation -->
+    <!-- Header Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main Navigation">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="index.html#hero">
           <img src="assets/images/logo.PNG" alt="Zenith IT Logo" height="40" />
         </a>
         <button
@@ -94,58 +94,65 @@
           <ul class="navbar-nav">
             <!-- Home -->
             <li class="nav-item">
-              <a class="nav-link" href="index.html">
-                <i class="fa-solid fa-home"></i> Home
+              <a class="nav-link" href="index.html#hero">
+                <i class="fa-solid fa-house"></i> Home
               </a>
             </li>
-            <!-- About Us -->
+            <!-- About Me -->
             <li class="nav-item">
-              <a class="nav-link" href="about.html">
-                <i class="fa-solid fa-info-circle"></i> About Us
+              <a class="nav-link" href="index.html#about">
+                <i class="fa-solid fa-info-circle"></i> About Me
               </a>
             </li>
             <!-- Services -->
             <li class="nav-item">
-              <a class="nav-link" href="services.html">
+              <a class="nav-link" href="index.html#services">
                 <i class="fa-solid fa-cogs"></i> Services
-              </a>
-            </li>
-            <!-- Careers -->
-            <li class="nav-item">
-              <a class="nav-link" href="careers.html">
-                <i class="fa-solid fa-user-tie"></i> Careers
               </a>
             </li>
             <!-- Contact -->
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">
+              <a class="nav-link" href="index.html#contact">
                 <i class="fa-solid fa-envelope"></i> Contact
               </a>
             </li>
-            <!-- Legal Dropdown -->
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="legalDropdown"
-                role="button"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-              >
+            <!-- Legal Dropdown for Desktop -->
+            <li class="nav-item dropdown d-none d-lg-block">
+              <a class="nav-link dropdown-toggle" href="#" id="legalDropdownDesktop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Legal
               </a>
-              <ul class="dropdown-menu" aria-labelledby="legalDropdown">
+              <ul class="dropdown-menu" aria-labelledby="legalDropdownDesktop">
                 <li>
                   <a class="dropdown-item" href="privacy-policy.html">
-                    Privacy Policy
+                    <i class="fa-solid fa-user-secret me-2"></i>Privacy Policy
                   </a>
                 </li>
                 <li>
                   <a class="dropdown-item" href="terms-of-service.html">
-                    Terms of Service
+                    <i class="fa-solid fa-file-contract me-2"></i>Terms of Service
                   </a>
                 </li>
               </ul>
+            </li>
+            <!-- Legal Dropdown for Mobile -->
+            <li class="nav-item d-block d-lg-none">
+              <a class="nav-link" data-bs-toggle="collapse" href="#legalCollapse" role="button" aria-expanded="false" aria-controls="legalCollapse">
+                Legal
+              </a>
+              <div class="collapse" id="legalCollapse">
+                <ul class="navbar-nav ps-3">
+                  <li class="nav-item">
+                    <a class="nav-link" href="privacy-policy.html">
+                      <i class="fa-solid fa-user-secret me-2"></i>Privacy Policy
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="terms-of-service.html">
+                      <i class="fa-solid fa-file-contract me-2"></i>Terms of Service
+                    </a>
+                  </li>
+                </ul>
+              </div>
             </li>
           </ul>
         </div>
@@ -273,22 +280,29 @@
     <!-- Footer -->
     <footer class="py-4 bg-dark text-white">
       <div class="container text-center">
+        <!-- Small White Logo in Footer -->
+        <div class="footer-logo mb-3">
+          <img src="assets/images/logo-white.PNG" alt="Zenith IT Logo" height="30" />
+        </div>
         <!-- Footer Navigation -->
         <ul class="list-inline mb-2">
           <li class="list-inline-item">
-            <a class="text-white text-decoration-none" href="index.html">Home</a>
+            <a class="text-white text-decoration-none" href="index.html#hero">Home</a>
           </li>
           <li class="list-inline-item">
-            <a class="text-white text-decoration-none" href="about.html">About Us</a>
+            <a class="text-white text-decoration-none" href="index.html#about">About Me</a>
           </li>
           <li class="list-inline-item">
-            <a class="text-white text-decoration-none" href="services.html">Services</a>
+            <a class="text-white text-decoration-none" href="index.html#services">Services</a>
           </li>
           <li class="list-inline-item">
-            <a class="text-white text-decoration-none" href="careers.html">Careers</a>
+            <a class="text-white text-decoration-none" href="index.html#contact">Contact</a>
           </li>
           <li class="list-inline-item">
-            <a class="text-white text-decoration-none" href="contact.html">Contact</a>
+            <a class="text-white text-decoration-none" href="privacy-policy.html">Privacy Policy</a>
+          </li>
+          <li class="list-inline-item">
+            <a class="text-white text-decoration-none" href="terms-of-service.html">Terms of Service</a>
           </li>
         </ul>
         <!-- Social Links -->
@@ -311,7 +325,7 @@
         </ul>
         <!-- Additional Footer Content -->
         <div class="footer-additional-content">
-          <p class="mb-2">Follow us on social media for the latest updates and news.</p>
+          <p class="mb-2">Follow me on social media for the latest updates and news.</p>
           <p class="mb-0">123 Innovation Way, Birmingham, B1 1AA, UK</p>
           <p class="mb-0">Phone: +44 1234 567890 | Email: <a href="mailto:info@zenithit.co.uk" class="text-white">info@zenithit.co.uk</a></p>
         </div>
