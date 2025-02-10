@@ -269,6 +269,20 @@ footer ul.list-inline li a {
   font-size: inherit;
 }
 
+/* Change all footer text and links to light grey */
+footer,
+footer p,
+footer li,
+footer a {
+  color: #ccc !important;
+}
+
+/* Change the white logo to light grey */
+.footer-logo img {
+  /* This reduces the brightness of a white logo (#ffffff) to light grey (#cccccc) */
+  filter: brightness(0.8);
+}
+
 /* Mobile Menu (Collapsed Navbar) Styling */
 @media (max-width: 992px) {
   .navbar-collapse {
