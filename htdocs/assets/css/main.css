@@ -148,7 +148,41 @@ html {
   margin-right: 0.5rem;
 }
 
+/* More Button in Hero */
+.more-button {
+  position: absolute; /* Positioned relative to the hero container */
+  bottom: 20px;           /* Adjust spacing from the bottom as needed */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 3;             /* Ensure it appears above the hero content */
+  animation: bounce 2s infinite;
+}
+
+/* Keyframes for More Button Bounce Animation */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  40% {
+    transform: translateX(-50%) translateY(-10px);
+  }
+  60% {
+    transform: translateX(-50%) translateY(-5px);
+  }
+}
+
 /* Buttons */
+/* Subtle Glow Animation Keyframes */
+@keyframes subtleGlow {
+  0%, 100% {
+    box-shadow: 0 0 5px rgba(0, 153, 204, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 8px rgba(0, 153, 204, 0.4);
+  }
+}
+
+/* Updated Get in Touch CTA Button Styles */
 .btn-primary {
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
@@ -156,11 +190,16 @@ html {
   background-color: #0099CC; /* Darker primary color */
   border: none;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  /* Set an initial box-shadow so the animation has something to animate from */
+  box-shadow: 0 0 5px rgba(0, 153, 204, 0.2);
+  animation: subtleGlow 3s ease-in-out infinite;
 }
 
 .btn-primary:hover {
   background-color: #00B3A0; /* Darker accent color */
   transform: translateY(-3px);
+  /* Optionally pause the animation on hover */
+  animation-play-state: paused;
 }
 
 .btn-primary i {
