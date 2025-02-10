@@ -128,6 +128,26 @@ html {
   margin-bottom: 2rem;
 }
 
+/* Button in Hero Section */
+.hero .btn-secondary {
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 50px;
+  background-color: #ffffff; /* White background */
+  color: #0099CC; /* Darker primary color */
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.hero .btn-secondary:hover {
+  background-color: #00B3A0; /* Darker accent color */
+  transform: translateY(-3px);
+}
+
+.hero .btn-secondary i {
+  margin-right: 0.5rem;
+}
+
 /* Buttons */
 .btn-primary {
   padding: 0.75rem 1.5rem;
