@@ -25,8 +25,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
-       <!-- AOS CSS (Animate On Scroll) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
     <!-- Main CSS -->
     <link rel="stylesheet" href="assets/css/main.css" />
     <!-- Favicon and Apple Touch Icons -->
@@ -50,7 +48,7 @@
   </head>
   <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main Navigation" data-aos="fade-down">
+    <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main Navigation">
       <div class="container">
         <a class="navbar-brand" href="#hero">
           <img src="assets/images/logo.PNG" alt="Zenith IT Logo" height="40" />
@@ -184,7 +182,7 @@
 <!-- Hero Section -->
 <header id="hero" class="hero text-center py-5 position-relative">
   <img
-    src="assets/images/hero.jpg"
+    src="assets/images/hero.webp"
     alt="Hero Background Image"
     class="hero-background"
   />
@@ -206,7 +204,7 @@
 </header>
 
       <!-- About Section -->
-      <section id="about" class="py-5" data-aos="fade-left">
+      <section id="about" class="py-5">
         <div class="container">
           <h2>About Me</h2>
           <p>
@@ -224,7 +222,7 @@
           <h2>Our Services</h2>
           <div class="row g-4">
             <!-- Service 1 -->
-            <div class="col-md-4" data-aos="fade">
+            <div class="col-md-4">
               <div class="card service-card h-100 p-3">
                 <img
                   src="assets/images/service1.jpg"
@@ -246,7 +244,7 @@
               </div>
             </div>
             <!-- Service 2 -->
-            <div class="col-md-4" data-aos="fade">
+            <div class="col-md-4">
               <div class="card service-card h-100 p-3">
                 <img
                   src="assets/images/service2.jpg"
@@ -268,7 +266,7 @@
               </div>
             </div>
             <!-- Service 3 -->
-            <div class="col-md-4" data-aos="fade">
+            <div class="col-md-4">
               <div class="card service-card h-100 p-3">
                 <img
                   src="assets/images/service3.jpg"
@@ -294,7 +292,7 @@
       </section>
       
       <!-- Contact Section -->
-      <section id="contact" class="py-5" data-aos="fade-up">
+      <section id="contact" class="py-5">
         <div class="container">
           <h2>Contact Me</h2>
           <p>
@@ -391,6 +389,9 @@
       <li class="list-inline-item">
         <a class="text-white text-decoration-none" href="terms-of-service.html">Terms of Service</a>
       </li>
+      <li class="list-inline-item">
+        <a class="text-white text-decoration-none" href="sitemap.html">Sitemap</a>
+      </li>
     </ul>
     <!-- Social Links & Additional Info -->
     <ul class="list-inline mb-2 text-center">
@@ -442,11 +443,6 @@
         });
       }
       window.onload = initMap;
-    </script>
-    <!-- AOS JS -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
-    <script>
-      AOS.init({ duration: 1000, once: true });
     </script>
   </body>
 </html>

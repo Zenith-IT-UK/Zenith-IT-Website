@@ -1,5 +1,5 @@
 User-agent: *
-Disallow: /assets/
+Disallow: /assets/documents
 Disallow: /cgi-bin/
 Disallow: /admin/
 Allow: /
