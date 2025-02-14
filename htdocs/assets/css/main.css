@@ -172,14 +172,24 @@ html {
 }
 
 /* Buttons */
-/* Subtle Glow Animation Keyframes */
-@keyframes subtleGlow {
-  0%, 100% {
-    box-shadow: 0 0 5px rgba(0, 153, 204, 0.2);
+@keyframes glow {
+  0% {
+    filter: brightness(0) invert(1) drop-shadow(0 0 5px rgba(0, 153, 204, 0.3));
   }
   50% {
-    box-shadow: 0 0 8px rgba(0, 153, 204, 0.4);
+    filter: brightness(0) invert(1) drop-shadow(0 0 15px rgba(0, 153, 204, 0.6));
   }
+  100% {
+    filter: brightness(0) invert(1) drop-shadow(0 0 5px rgba(0, 153, 204, 0.3));
+  }
+}
+
+.hero-logo {
+  height: 80px;
+  max-width: 100%;
+  display: block;
+  margin: 0 auto 1rem;
+  animation: glow 2.5s ease-in-out infinite; /* Smooth glow animation */
 }
 
 /* Updated Get in Touch CTA Button Styles */
@@ -187,19 +197,16 @@ html {
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
   border-radius: 50px;
-  background-color: #0099CC; /* Darker primary color */
+  background-color: #0099CC; /* Primary color */
   border: none;
   transition: background-color 0.3s ease, transform 0.3s ease;
-  /* Set an initial box-shadow so the animation has something to animate from */
-  box-shadow: 0 0 5px rgba(0, 153, 204, 0.2);
-  animation: subtleGlow 3s ease-in-out infinite;
+  animation: pulseGlow 2s infinite ease-in-out;
 }
 
 .btn-primary:hover {
   background-color: #00B3A0; /* Darker accent color */
-  transform: translateY(-3px);
-  /* Optionally pause the animation on hover */
-  animation-play-state: paused;
+  transform: scale(1.08);
+  animation-play-state: paused; /* Stops animation on hover */
 }
 
 .btn-primary i {

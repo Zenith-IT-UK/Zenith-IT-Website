@@ -80,67 +80,99 @@
                 <i class="fa-solid fa-info-circle"></i> About Me
               </a>
             </li>
-            <!-- Services Dropdown -->
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fa-solid fa-cogs"></i> Services
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                <li>
-                  <a class="dropdown-item" href="service-it-strategy.html">IT Strategy Consulting</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="service-cloud-solutions.html">Cloud Solutions</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="service-managed-it.html">Managed IT Services</a>
-                </li>
-              </ul>
-            </li>
+<!-- Services Dropdown for Desktop -->
+<li class="nav-item dropdown d-none d-lg-block">
+  <a class="nav-link dropdown-toggle" href="#" id="servicesDropdownDesktop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="fa-solid fa-cogs"></i> Services
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="servicesDropdownDesktop">
+    <li>
+      <a class="dropdown-item" href="service-it-strategy.html">
+        <i class="fa-solid fa-lightbulb me-2"></i>IT Strategy Consulting
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item" href="service-cloud-solutions.html">
+        <i class="fa-solid fa-cloud me-2"></i>Cloud Solutions
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item" href="service-managed-it.html">
+        <i class="fa-solid fa-server me-2"></i>Managed IT Services
+      </a>
+    </li>
+  </ul>
+</li>
+
+<!-- Services Dropdown for Mobile -->
+<li class="nav-item d-block d-lg-none">
+  <a class="nav-link" data-bs-toggle="collapse" href="#servicesCollapse" role="button" aria-expanded="false" aria-controls="servicesCollapse">
+    <i class="fa-solid fa-cogs me-2"></i> Services
+  </a>
+  <div class="collapse" id="servicesCollapse">
+    <ul class="navbar-nav ps-3">
+      <li class="nav-item">
+        <a class="nav-link" href="service-it-strategy.html">
+          <i class="fa-solid fa-lightbulb me-2"></i> IT Strategy Consulting
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="service-cloud-solutions.html">
+          <i class="fa-solid fa-cloud me-2"></i> Cloud Solutions
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="service-managed-it.html">
+          <i class="fa-solid fa-server me-2"></i> Managed IT Services
+        </a>
+      </li>
+    </ul>
+  </div>
+</li>
             <!-- Contact -->
             <li class="nav-item">
               <a class="nav-link" href="#contact">
                 <i class="fa-solid fa-envelope"></i> Contact
               </a>
             </li>
-            <!-- Legal Dropdown for Desktop -->
-            <li class="nav-item dropdown d-none d-lg-block">
-              <a class="nav-link dropdown-toggle" href="#" id="legalDropdownDesktop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Legal
-              </a>
-              <ul class="dropdown-menu" aria-labelledby="legalDropdownDesktop">
-                <li>
-                  <a class="dropdown-item" href="privacy-policy.html">
-                    <i class="fa-solid fa-user-secret me-2"></i>Privacy Policy
-                  </a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="terms-of-service.html">
-                    <i class="fa-solid fa-file-contract me-2"></i>Terms of Service
-                  </a>
-                </li>
-              </ul>
-            </li>
-            <!-- Legal Dropdown for Mobile -->
-            <li class="nav-item d-block d-lg-none">
-              <a class="nav-link" data-bs-toggle="collapse" href="#legalCollapse" role="button" aria-expanded="false" aria-controls="legalCollapse">
-                Legal
-              </a>
-              <div class="collapse" id="legalCollapse">
-                <ul class="navbar-nav ps-3">
-                  <li class="nav-item">
-                    <a class="nav-link" href="privacy-policy.html">
-                      <i class="fa-solid fa-user-secret me-2"></i>Privacy Policy
-                    </a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="terms-of-service.html">
-                      <i class="fa-solid fa-file-contract me-2"></i>Terms of Service
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            </li>
+           <!-- Legal Dropdown for Desktop -->
+<li class="nav-item dropdown d-none d-lg-block">
+  <a class="nav-link dropdown-toggle" href="#" id="legalDropdownDesktop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="fa-solid fa-gavel me-2"></i> Legal
+  </a>
+  <ul class="dropdown-menu" aria-labelledby="legalDropdownDesktop">
+    <li>
+      <a class="dropdown-item" href="privacy-policy.html">
+        <i class="fa-solid fa-user-secret me-2"></i> Privacy Policy
+      </a>
+    </li>
+    <li>
+      <a class="dropdown-item" href="terms-of-service.html">
+        <i class="fa-solid fa-file-contract me-2"></i> Terms of Service
+      </a>
+    </li>
+  </ul>
+</li>
+  <!-- Legal Dropdown for Mobile -->
+<li class="nav-item d-block d-lg-none">
+  <a class="nav-link" data-bs-toggle="collapse" href="#legalCollapse" role="button" aria-expanded="false" aria-controls="legalCollapse">
+    <i class="fa-solid fa-gavel me-2"></i> Legal
+  </a>
+  <div class="collapse" id="legalCollapse">
+    <ul class="navbar-nav ps-3">
+      <li class="nav-item">
+        <a class="nav-link" href="privacy-policy.html">
+          <i class="fa-solid fa-user-secret me-2"></i> Privacy Policy
+        </a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="terms-of-service.html">
+          <i class="fa-solid fa-file-contract me-2"></i> Terms of Service
+        </a>
+      </li>
+    </ul>
+  </div>
+</li>
           </ul>
         </div>
       </div>
