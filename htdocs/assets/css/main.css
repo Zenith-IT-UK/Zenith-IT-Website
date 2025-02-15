@@ -134,11 +134,11 @@ html {
   left: 50%;
   transform: translateX(-50%);
   z-index: 3; /* Ensure the button is in front of the gradient */
-  background-color: #00B3A0;
-  border: none;
-  color: #fff;
+  background-color: #fff;
+  color: #0099CC; /* Theme color */
   padding: 0.75rem 1.5rem;
-  border-radius: 50px;
+  border-radius: 50px; /* Capsule shape */
+  border: 2px solid #0099CC; /* Border with theme color */
   transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   animation: bounce 2s infinite;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -146,6 +146,7 @@ html {
 
 .more-button:hover {
   background-color: #0099CC;
+  color: #fff;
   transform: translateY(-3px);
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
