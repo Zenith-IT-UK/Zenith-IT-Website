@@ -133,7 +133,7 @@ html {
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 3; /* Ensure the button is in front of the gradient */
+  z-index: 4; /* Ensure the button is in front of the gradient and background image */
   background-color: #fff;
   color: #0099CC; /* Theme color */
   padding: 0.75rem 1.5rem;
