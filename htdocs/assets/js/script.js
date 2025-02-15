@@ -6,3 +6,19 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
   });
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  var dropdowns = document.querySelectorAll('.navbar-nav .dropdown');
+
+  dropdowns.forEach(function (dropdown) {
+    dropdown.addEventListener('show.bs.dropdown', function () {
+      var dropdownMenu = this.querySelector('.dropdown-menu');
+      dropdownMenu.classList.add('show');
+    });
+
+    dropdown.addEventListener('hide.bs.dropdown', function () {
+      var dropdownMenu = this.querySelector('.dropdown-menu');
+      dropdownMenu.classList.remove('show');
+    });
+  });
+});
