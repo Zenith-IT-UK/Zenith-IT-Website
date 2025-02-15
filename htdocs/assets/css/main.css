@@ -140,11 +140,24 @@ html {
   padding: 0.75rem 1.5rem;
   border-radius: 50px;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  animation: bounce 2s infinite;
 }
 
 .more-button:hover {
   background-color: #0099CC;
   transform: translateY(-3px);
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
 }
 
 /* Buttons */
