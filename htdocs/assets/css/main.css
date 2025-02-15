@@ -78,12 +78,14 @@ html {
   opacity: 0; /* Make dropdown invisible by default */
   transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for opacity and transform */
   transform: translateY(-10px); /* Move dropdown up by 10px */
+  margin-top: 0; /* Remove default margin */
 }
 
 .navbar-nav .dropdown-menu.show {
   display: block; /* Show dropdown when active */
   opacity: 1; /* Make dropdown visible */
   transform: translateY(0); /* Move dropdown to original position */
+  margin-top: 0.5rem; /* Add margin to drop down from the navbar */
 }
 
 /* Hero Section */
