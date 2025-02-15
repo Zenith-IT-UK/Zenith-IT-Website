@@ -77,7 +77,7 @@ html {
   display: none; /* Hide dropdown by default */
   opacity: 0; /* Make dropdown invisible by default */
   transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth transition for opacity and transform */
-  transform: translateY(-10px); /* Move dropdown up by 10px */
+  transform: translateY(10px); /* Move dropdown down by 10px */
   margin-top: 0; /* Remove default margin */
 }
 
