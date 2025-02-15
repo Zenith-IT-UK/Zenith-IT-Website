@@ -135,7 +135,7 @@ html {
   transform: translateX(-50%);
   z-index: 4; /* Ensure the button is in front of the gradient and background image */
   background-color: #fff;
-  color: #0099CC; /* Theme color */
+  color: #0099CC !important; /* Ensure text color is visible */
   padding: 0.75rem 1.5rem;
   border-radius: 50px; /* Capsule shape */
   border: 2px solid #0099CC; /* Border with theme color */
@@ -146,7 +146,7 @@ html {
 
 .more-button:hover {
   background-color: #0099CC;
-  color: #fff;
+  color: #fff !important; /* Ensure text color is visible on hover */
   transform: translateY(-3px);
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
 }
