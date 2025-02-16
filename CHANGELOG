@@ -1,0 +1,12 @@
+# Changelog  
+All notable changes to this project will be documented in this file.  
+
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).  
+
+## [1.0.0] - YYYY-MM-DD  
+### Added  
+- Initial release of the Zenith IT website.  
+- Homepage with company overview and services.  
+- Contact page with inquiry form.  
+- About page with company background and team details.  
+- Blog section for industry updates and company news.  
