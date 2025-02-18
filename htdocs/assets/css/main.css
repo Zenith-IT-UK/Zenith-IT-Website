@@ -147,13 +147,22 @@ html {
 /* Hero Section */
 .hero {
   position: relative;
-  height: 100vh;
+  height: 100vh; /* Full height on mobile */
+  min-height: 600px; /* Minimum height for very small screens */
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff;
   text-align: center;
   padding: 0 1rem;
+}
+
+/* Desktop-specific height */
+@media (min-width: 992px) {
+  .hero {
+    height: 600px; /* Fixed height on desktop */
+    min-height: auto;
+  }
 }
 
 .hero-background {
@@ -207,6 +216,7 @@ html {
 
 /* More Button */
 .more-button {
+  position: absolute;
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
@@ -216,28 +226,27 @@ html {
   padding: 0.75rem 1.5rem;
   border-radius: 50px;
   border: 2px solid #0099CC;
-  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-  animation: bounce 2s infinite;
+  transition: all 0.3s ease;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: inline-block; /* Add this */
+  white-space: nowrap; /* Prevent text wrapping */
 }
 
-.more-button:hover {
-  background-color: #0099CC;
-  color: #fff !important;
-  transform: translateY(-3px);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
-}
-
+/* Update bounce animation to work with centered position */
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
+    transform: translateX(-50%) translateY(0);
   }
   40% {
-    transform: translateY(-10px);
+    transform: translateX(-50%) translateY(-10px);
   }
   60% {
-    transform: translateY(-5px);
+    transform: translateX(-50%) translateY(-5px);
   }
+}
+
+.more-button {
+  animation: bounce 2s infinite;
 }
 
 /* Buttons */
