@@ -444,5 +444,21 @@
       }
       window.onload = initMap;
     </script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  const navbar = document.querySelector('.navbar');
+  
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 100) {
+      navbar.classList.add('navbar-shrink');
+    } else {
+      navbar.classList.remove('navbar-shrink');
+    }
+  });
+  
+  // Trigger scroll event once to initialize state
+  window.dispatchEvent(new Event('scroll'));
+});
+</script>
   </body>
 </html>
