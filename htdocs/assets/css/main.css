@@ -55,18 +55,34 @@ html {
   color: #00B3A0;
 }
 
+/* Base styling for the custom hamburger spans */
 .navbar-toggler {
   border: none;
   background: transparent;
   outline: none;
+  cursor: pointer;
 }
 
-.navbar-toggler:focus {
-  box-shadow: none;
+.toggler-icon {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  background-color: #0099CC;
+  transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
-.navbar-toggler-icon {
-  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%230099CC' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+/* When toggled open: first and third span rotate and shift, middle one fades out */
+.navbar-toggler.open .toggler-icon:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.navbar-toggler.open .toggler-icon:nth-child(2) {
+  opacity: 0;
+}
+
+.navbar-toggler.open .toggler-icon:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
 }
 
 /* Centered Navigation Links */
