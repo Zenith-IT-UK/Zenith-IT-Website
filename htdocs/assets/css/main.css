@@ -214,7 +214,8 @@ html {
   width: auto;
   display: block;
   margin: 0 auto 1rem;
-  filter: brightness(0) invert(1);
+  /* Remove the filter that made the logo white */
+  /* filter: brightness(0) invert(1); */
 }
 
 .hero h1 {
