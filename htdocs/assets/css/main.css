@@ -115,14 +115,12 @@ html {
   margin-top: 0.5rem;
 }
 
-/* Shrinking Navbar Styles with Translucency */
+/* Shrinking Navbar Styles without changing background color */
 .navbar-shrink {
   padding-top: 0.5rem !important;
   padding-bottom: 0.5rem !important;
-  background-color: rgba(255, 255, 255, 0.85) !important;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: rgba(255, 255, 255, 0.6) !important; /* Ensure it stays transparent */
 }
 
 .navbar-shrink .navbar-brand img {
@@ -131,7 +129,7 @@ html {
 
 @media (max-width: 992px) {
   .navbar-collapse {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(255, 255, 255, 0.6) !important; /* Ensure it stays transparent */
     padding: 1rem;
     border-radius: 5px;
     margin-top: 0.5rem;
@@ -508,4 +506,9 @@ footer ul.list-inline li a {
 /* This offset ensures that when an anchor link is clicked, the section isn't hidden under the fixed navbar. */
 section {
   scroll-margin-top: 70px;
+}
+
+.fa-chevron-down.rotate {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
 }

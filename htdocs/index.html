@@ -100,7 +100,7 @@
 <!-- Services Dropdown for Mobile -->
 <li class="nav-item d-block d-lg-none">
   <a class="nav-link" data-bs-toggle="collapse" href="#servicesCollapse" role="button" aria-expanded="false" aria-controls="servicesCollapse">
-    <i class="fa-solid fa-cogs me-2"></i> Services
+    <i class="fa-solid fa-cogs me-2"></i> Services <i class="fa-solid fa-chevron-down ms-2"></i>
   </a>
   <div class="collapse" id="servicesCollapse">
     <ul class="navbar-nav ps-3">
@@ -149,7 +149,7 @@
   <!-- Legal Dropdown for Mobile -->
 <li class="nav-item d-block d-lg-none">
   <a class="nav-link" data-bs-toggle="collapse" href="#legalCollapse" role="button" aria-expanded="false" aria-controls="legalCollapse">
-    <i class="fa-solid fa-gavel me-2"></i> Legal
+    <i class="fa-solid fa-gavel me-2"></i> Legal <i class="fa-solid fa-chevron-down ms-2"></i>
   </a>
   <div class="collapse" id="legalCollapse">
     <ul class="navbar-nav ps-3">
@@ -454,6 +454,22 @@ document.addEventListener('DOMContentLoaded', function() {
   // Trigger scroll event once to initialize state
   window.dispatchEvent(new Event('scroll'));
 });
+</script>
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const toggler = document.querySelector('.navbar-toggler');
+    toggler.addEventListener('click', function() {
+      this.classList.toggle('open');
+    });
+
+    const dropdownToggles = document.querySelectorAll('.nav-link[data-bs-toggle="collapse"]');
+    dropdownToggles.forEach(toggle => {
+      toggle.addEventListener('click', function() {
+        const chevron = this.querySelector('.fa-chevron-down');
+        chevron.classList.toggle('rotate');
+      });
+    });
+  });
 </script>
   </body>
 </html>
