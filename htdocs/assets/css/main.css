@@ -104,15 +104,31 @@ html {
   display: none;
   opacity: 0;
   transition: opacity 0.3s ease, transform 0.3s ease;
-  transform: translateY(10px);
+  transform: translateY(10px); /* Start below the navbar */
   margin-top: 0;
 }
 
 .navbar-nav .dropdown-menu.show {
   display: block;
   opacity: 1;
-  transform: translateY(0);
+  transform: translateY(0); /* Slide down to its original position */
   margin-top: 0.5rem;
+}
+
+/* Custom styles for dropdown menus */
+.navbar-nav .dropdown-menu {
+  background-color: #f8f9fa; /* Light background color */
+  border: 1px solid #ddd; /* Light border */
+  border-radius: 0.25rem; /* Rounded corners */
+}
+
+.navbar-nav .dropdown-menu .dropdown-item {
+  color: #333; /* Dark text color */
+}
+
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+  background-color: #e9ecef; /* Slightly darker background on hover */
+  color: #000; /* Darker text color on hover */
 }
 
 /* Shrinking Navbar Styles without changing background color */
