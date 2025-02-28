@@ -251,7 +251,7 @@ html {
   background: linear-gradient(
     120deg,
     transparent 0%,
-    rgba(0, 179, 160, 0.8) 50%, /* Teal color to match primary buttons */
+    rgba(0, 179, 160, 1) 50%, /* Increase opacity to 1 */
     transparent 100%
   );
   transform: skewX(-25deg);
@@ -259,6 +259,7 @@ html {
   pointer-events: none;
   z-index: 2;
   mix-blend-mode: screen; /* Helps the shimmer stand out on opaque images */
+  filter: brightness(1.5); /* Increase brightness */
 }
 
 @keyframes shimmer {
@@ -288,8 +289,8 @@ html {
   left: 50%;
   transform: translateX(-50%);
   z-index: 4;
-  background-color: #fff;
-  color: #0099CC !important;
+  background-color: #0099CC; /* Teal color */
+  color: #fff !important; /* Ensure text color is visible */
   padding: 0.75rem 1.5rem;
   border-radius: 50px;
   border: 2px solid #0099CC;
