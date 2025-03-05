@@ -45,7 +45,7 @@
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="assets/images/icons/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
-    <!-- Dark Mode CSS (additional styles) -->
+    <!-- Dark Mode Inline Overrides -->
     <style>
       /* Dark Mode Styles */
       .dark-mode {
@@ -55,11 +55,33 @@
       .dark-mode a {
         color: #90caf9;
       }
-      .dark-mode .navbar,
-      .dark-mode footer {
-        background-color: #1e1e1e;
+      /* In dark mode, the navbar uses a grey overlay */
+      .dark-mode .navbar {
+        background-color: rgba(50, 50, 50, 0.8);
       }
-      /* You can add more dark mode adjustments as needed */
+      /* Override shrunk navbar in dark mode */
+      .dark-mode .navbar-shrink {
+        background-color: rgba(50, 50, 50, 0.8) !important;
+      }
+      /* Dark mode footer */
+      .dark-mode footer {
+        background-color: rgba(50, 50, 50, 0.8);
+      }
+      /* Dark mode services section background */
+      .dark-mode #services {
+        background-color: #2a2a2a;
+      }
+      /* Dark mode form entry boxes */
+      .dark-mode .contact-form input,
+      .dark-mode .contact-form textarea {
+        background-color: #333;
+        color: #e0e0e0;
+        border-color: #555;
+      }
+      .dark-mode .contact-form input:focus,
+      .dark-mode .contact-form textarea:focus {
+        border-color: #0099CC;
+      }
     </style>
   </head>
   <body>
@@ -231,7 +253,7 @@
       </section>
 
       <!-- Services Section -->
-      <section id="services" class="bg-light py-5">
+      <section id="services" class="py-5">
         <div class="container">
           <h2>Our Services</h2>
           <div class="row g-4">
@@ -350,7 +372,7 @@
     </main>
 
     <!-- Footer -->
-    <footer class="py-4 bg-dark text-white">
+    <footer class="py-4">
       <div class="container">
         <!-- Logo at the Top Center -->
         <div class="text-center mb-3">
@@ -426,78 +448,7 @@
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Google Maps API -->
     <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQSsmzhQpNGcHFCucuALZm8ZWiHpbu1FA"></script>
-    <script defer>
-      function initMap() {
-        var birmingham = { lat: 52.4862, lng: -1.8904 };
-        var map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 10,
-          center: birmingham,
-        });
-        var marker = new google.maps.Marker({
-          position: birmingham,
-          map: map,
-        });
-      }
-      window.onload = initMap;
-    </script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const navbar = document.querySelector('.navbar');
-        const hero = document.querySelector('#hero');
-
-        window.addEventListener('scroll', function() {
-          if (window.scrollY > hero.offsetHeight) {
-            navbar.classList.add('navbar-shrink');
-          } else {
-            navbar.classList.remove('navbar-shrink');
-          }
-        });
-
-        // Trigger scroll event once to initialize state
-        window.dispatchEvent(new Event('scroll'));
-      });
-    </script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const toggler = document.querySelector('.navbar-toggler');
-        toggler.addEventListener('click', function() {
-          this.classList.toggle('open');
-        });
-
-        const dropdownToggles = document.querySelectorAll('.nav-link[data-bs-toggle="collapse"]');
-        dropdownToggles.forEach(toggle => {
-          toggle.addEventListener('click', function() {
-            const chevron = this.querySelector('.fa-chevron-down');
-            if(chevron) {
-              chevron.classList.toggle('rotate');
-            }
-          });
-        });
-      });
-    </script>
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const sections = document.querySelectorAll('section');
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.style.opacity = '1';
-              observer.unobserve(entry.target);
-            }
-          });
-        }, {
-          threshold: 0.1
-        });
-        sections.forEach(section => {
-          observer.observe(section);
-        });
-      });
-    </script>
-    <!-- Dark Mode Toggle Script -->
-    <script>
-      document.getElementById('darkModeToggle').addEventListener('click', function() {
-        document.body.classList.toggle('dark-mode');
-      });
-    </script>
+    <!-- External JS -->
+    <script defer src="assets/js/script.js"></script>
   </body>
 </html>
