@@ -45,6 +45,22 @@
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="assets/images/icons/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
+    <!-- Dark Mode CSS (additional styles) -->
+    <style>
+      /* Dark Mode Styles */
+      .dark-mode {
+        background-color: #121212;
+        color: #e0e0e0;
+      }
+      .dark-mode a {
+        color: #90caf9;
+      }
+      .dark-mode .navbar,
+      .dark-mode footer {
+        background-color: #1e1e1e;
+      }
+      /* You can add more dark mode adjustments as needed */
+    </style>
   </head>
   <body>
     <!-- Navigation -->
@@ -53,12 +69,16 @@
         <a class="navbar-brand" href="#hero">
           <img src="assets/images/Logo/SVG/Logo/logo-color.svg" alt="Zenith IT Logo" height="40" />
         </a>
-     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-  <span class="toggler-icon"></span>
-  <span class="toggler-icon"></span>
-  <span class="toggler-icon"></span>
-</button>
+        <!-- Dark Mode Toggle Button -->
+        <button id="darkModeToggle" class="btn btn-secondary ms-auto me-2" aria-label="Toggle dark mode">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="toggler-icon"></span>
+          <span class="toggler-icon"></span>
+          <span class="toggler-icon"></span>
+        </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
             <!-- Home (anchor to hero section) -->
@@ -73,99 +93,98 @@
                 <i class="fa-solid fa-info-circle"></i> About Me
               </a>
             </li>
-<!-- Services Dropdown for Desktop -->
-<li class="nav-item dropdown d-none d-lg-block">
-  <a class="nav-link dropdown-toggle" href="#" id="servicesDropdownDesktop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    <i class="fa-solid fa-cogs"></i> Services
-  </a>
-  <ul class="dropdown-menu" aria-labelledby="servicesDropdownDesktop">
-    <li>
-      <a class="dropdown-item" href="service-it-strategy.html">
-        <i class="fa-solid fa-lightbulb me-2"></i>IT Strategy Consulting
-      </a>
-    </li>
-    <li>
-      <a class="dropdown-item" href="service-cloud-solutions.html">
-        <i class="fa-solid fa-cloud me-2"></i>Cloud Solutions
-      </a>
-    </li>
-    <li>
-      <a class="dropdown-item" href="service-managed-it.html">
-        <i class="fa-solid fa-server me-2"></i>Managed IT Services
-      </a>
-    </li>
-  </ul>
-</li>
-
-<!-- Services Dropdown for Mobile -->
-<li class="nav-item d-block d-lg-none">
-  <a class="nav-link" data-bs-toggle="collapse" href="#servicesCollapse" role="button" aria-expanded="false" aria-controls="servicesCollapse">
-    <i class="fa-solid fa-cogs me-2"></i> Services <i class="fa-solid fa-chevron-down ms-2"></i>
-  </a>
-  <div class="collapse" id="servicesCollapse">
-    <ul class="navbar-nav ps-3">
-      <li class="nav-item">
-        <a class="nav-link" href="service-it-strategy.html">
-          <i class="fa-solid fa-lightbulb me-2"></i> IT Strategy Consulting
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="service-cloud-solutions.html">
-          <i class="fa-solid fa-cloud me-2"></i> Cloud Solutions
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="service-managed-it.html">
-          <i class="fa-solid fa-server me-2"></i> Managed IT Services
-        </a>
-      </li>
-    </ul>
-  </div>
-</li>
+            <!-- Services Dropdown for Desktop -->
+            <li class="nav-item dropdown d-none d-lg-block">
+              <a class="nav-link dropdown-toggle" href="#" id="servicesDropdownDesktop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-cogs"></i> Services
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="servicesDropdownDesktop">
+                <li>
+                  <a class="dropdown-item" href="service-it-strategy.html">
+                    <i class="fa-solid fa-lightbulb me-2"></i>IT Strategy Consulting
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="service-cloud-solutions.html">
+                    <i class="fa-solid fa-cloud me-2"></i>Cloud Solutions
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="service-managed-it.html">
+                    <i class="fa-solid fa-server me-2"></i>Managed IT Services
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!-- Services Dropdown for Mobile -->
+            <li class="nav-item d-block d-lg-none">
+              <a class="nav-link" data-bs-toggle="collapse" href="#servicesCollapse" role="button" aria-expanded="false" aria-controls="servicesCollapse">
+                <i class="fa-solid fa-cogs me-2"></i> Services <i class="fa-solid fa-chevron-down ms-2"></i>
+              </a>
+              <div class="collapse" id="servicesCollapse">
+                <ul class="navbar-nav ps-3">
+                  <li class="nav-item">
+                    <a class="nav-link" href="service-it-strategy.html">
+                      <i class="fa-solid fa-lightbulb me-2"></i> IT Strategy Consulting
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="service-cloud-solutions.html">
+                      <i class="fa-solid fa-cloud me-2"></i> Cloud Solutions
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="service-managed-it.html">
+                      <i class="fa-solid fa-server me-2"></i> Managed IT Services
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
             <!-- Contact -->
             <li class="nav-item">
               <a class="nav-link" href="#contact">
                 <i class="fa-solid fa-envelope"></i> Contact
               </a>
             </li>
-           <!-- Legal Dropdown for Desktop -->
-<li class="nav-item dropdown d-none d-lg-block">
-  <a class="nav-link dropdown-toggle" href="#" id="legalDropdownDesktop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-    <i class="fa-solid fa-gavel me-2"></i> Legal
-  </a>
-  <ul class="dropdown-menu" aria-labelledby="legalDropdownDesktop">
-    <li>
-      <a class="dropdown-item" href="privacy-policy.html">
-        <i class="fa-solid fa-user-secret me-2"></i> Privacy Policy
-      </a>
-    </li>
-    <li>
-      <a class="dropdown-item" href="terms-of-service.html">
-        <i class="fa-solid fa-file-contract me-2"></i> Terms of Service
-      </a>
-    </li>
-  </ul>
-</li>
-  <!-- Legal Dropdown for Mobile -->
-<li class="nav-item d-block d-lg-none">
-  <a class="nav-link" data-bs-toggle="collapse" href="#legalCollapse" role="button" aria-expanded="false" aria-controls="legalCollapse">
-    <i class="fa-solid fa-gavel me-2"></i> Legal <i class="fa-solid fa-chevron-down ms-2"></i>
-  </a>
-  <div class="collapse" id="legalCollapse">
-    <ul class="navbar-nav ps-3">
-      <li class="nav-item">
-        <a class="nav-link" href="privacy-policy.html">
-          <i class="fa-solid fa-user-secret me-2"></i> Privacy Policy
-        </a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="terms-of-service.html">
-          <i class="fa-solid fa-file-contract me-2"></i> Terms of Service
-        </a>
-      </li>
-    </ul>
-  </div>
-</li>
+            <!-- Legal Dropdown for Desktop -->
+            <li class="nav-item dropdown d-none d-lg-block">
+              <a class="nav-link dropdown-toggle" href="#" id="legalDropdownDesktop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-gavel me-2"></i> Legal
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="legalDropdownDesktop">
+                <li>
+                  <a class="dropdown-item" href="privacy-policy.html">
+                    <i class="fa-solid fa-user-secret me-2"></i> Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="terms-of-service.html">
+                    <i class="fa-solid fa-file-contract me-2"></i> Terms of Service
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!-- Legal Dropdown for Mobile -->
+            <li class="nav-item d-block d-lg-none">
+              <a class="nav-link" data-bs-toggle="collapse" href="#legalCollapse" role="button" aria-expanded="false" aria-controls="legalCollapse">
+                <i class="fa-solid fa-gavel me-2"></i> Legal <i class="fa-solid fa-chevron-down ms-2"></i>
+              </a>
+              <div class="collapse" id="legalCollapse">
+                <ul class="navbar-nav ps-3">
+                  <li class="nav-item">
+                    <a class="nav-link" href="privacy-policy.html">
+                      <i class="fa-solid fa-user-secret me-2"></i> Privacy Policy
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="terms-of-service.html">
+                      <i class="fa-solid fa-file-contract me-2"></i> Terms of Service
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
           </ul>
         </div>
       </div>
@@ -173,31 +192,30 @@
 
     <!-- Main Content -->
     <main>
-      <!-- Hero Section (with an anchor id) -->
-<!-- Hero Section -->
-<header id="hero" class="hero text-center py-5 position-relative">
-  <img
-    src="assets/images/hero.webp"
-    alt="Hero Background Image"
-    class="hero-background"
-    loading="lazy"
-  />
-  <div class="container">
-    <img
-      src="assets/images/Logo/SVG/Logo/logo-white.svg"
-      alt="Zenith IT Logo"
-      class="hero-logo mb-4"
-    />
-    <p class="lead">Innovative IT Consultancy for a Digital Future</p>
-    <a href="#contact" class="btn btn-primary cta-button">
-      <i class="fa-solid fa-paper-plane"></i> Get in Touch
-    </a>
-  </div>
-  <!-- More Button Positioned at the Bottom Center -->
-  <a href="#about" class="btn btn-secondary more-button position-absolute text-theme-color bg-white animate-bounce" style="bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 4; color: #0099CC; border: 2px solid #0099CC;">
-    <i class="fa-solid fa-chevron-down"></i> More Info
-  </a>
-</header>
+      <!-- Hero Section -->
+      <header id="hero" class="hero text-center py-5 position-relative">
+        <img
+          src="assets/images/hero.webp"
+          alt="Hero Background Image"
+          class="hero-background"
+          loading="lazy"
+        />
+        <div class="container">
+          <img
+            src="assets/images/Logo/SVG/Logo/logo-white.svg"
+            alt="Zenith IT Logo"
+            class="hero-logo mb-4"
+          />
+          <p class="lead">Innovative IT Consultancy for a Digital Future</p>
+          <a href="#contact" class="btn btn-primary cta-button">
+            <i class="fa-solid fa-paper-plane"></i> Get in Touch
+          </a>
+        </div>
+        <!-- More Button Positioned at the Bottom Center -->
+        <a href="#about" class="btn btn-secondary more-button position-absolute text-theme-color bg-white animate-bounce" style="bottom: 20px; left: 50%; transform: translateX(-50%); z-index: 4; color: #0099CC; border: 2px solid #0099CC;">
+          <i class="fa-solid fa-chevron-down"></i> More Info
+        </a>
+      </header>
 
       <!-- About Section -->
       <section id="about" class="py-5">
@@ -311,33 +329,15 @@
               <form class="contact-form" method="post" action="#">
                 <div class="mb-3">
                   <label for="name" class="form-label">Name</label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    id="name"
-                    placeholder="Your Name"
-                    required
-                  />
+                  <input type="text" class="form-control" id="name" placeholder="Your Name" required />
                 </div>
                 <div class="mb-3">
                   <label for="email" class="form-label">Email address</label>
-                  <input
-                    type="email"
-                    class="form-control"
-                    id="email"
-                    placeholder="name@example.com"
-                    required
-                  />
+                  <input type="email" class="form-control" id="email" placeholder="name@example.com" required />
                 </div>
                 <div class="mb-3">
                   <label for="message" class="form-label">Message</label>
-                  <textarea
-                    class="form-control"
-                    id="message"
-                    rows="5"
-                    placeholder="Your message"
-                    required
-                  ></textarea>
+                  <textarea class="form-control" id="message" rows="5" placeholder="Your message" required></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary w-100">
                   <i class="fa-solid fa-paper-plane"></i> Send Message
@@ -349,78 +349,78 @@
       </section>
     </main>
 
-<!-- Footer -->
-<footer class="py-4 bg-dark text-white">
-  <div class="container">
-    <!-- Logo at the Top Center -->
-    <div class="text-center mb-3">
-      <img src="assets/images/Logo/SVG/Logo/logo-white.svg" alt="Zenith IT Logo" height="30" />
-    </div>
-    <!-- Footer Navigation Links -->
-    <ul class="list-inline text-center">
-      <li class="list-inline-item">
-        <a class="text-white text-decoration-none" href="index.html#hero">Home</a>
-      </li>
-      <li class="list-inline-item">
-        <a class="text-white text-decoration-none" href="index.html#about">About Me</a>
-      </li>
-      <li class="list-inline-item">
-        <a class="text-white text-decoration-none" href="index.html#services">Services</a>
-      </li>
-      <li class="list-inline-item">
-        <a class="text-white text-decoration-none" href="service-it-strategy.html">IT Strategy Consulting</a>
-      </li>
-      <li class="list-inline-item">
-        <a class="text-white text-decoration-none" href="service-cloud-solutions.html">Cloud Solutions</a>
-      </li>
-      <li class="list-inline-item">
-        <a class="text-white text-decoration-none" href="service-managed-it.html">Managed IT Services</a>
-      </li>
-      <li class="list-inline-item">
-        <a class="text-white text-decoration-none" href="index.html#contact">Contact</a>
-      </li>
-      <li class="list-inline-item">
-        <a class="text-white text-decoration-none" href="privacy-policy.html">Privacy Policy</a>
-      </li>
-      <li class="list-inline-item">
-        <a class="text-white text-decoration-none" href="terms-of-service.html">Terms of Service</a>
-      </li>
-      <li class="list-inline-item">
-        <a class="text-white text-decoration-none" href="sitemap.html">Sitemap</a>
-      </li>
-    </ul>
-    <!-- Social Links & Additional Info -->
-    <ul class="list-inline mb-2 text-center">
-      <li class="list-inline-item">
-        <a class="text-white" href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
-          <i class="fa-brands fa-linkedin fa-lg"></i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="text-white" href="https://www.x.com" target="_blank" rel="noopener" aria-label="X">
-          <i class="fa-brands fa-x-twitter fa-lg"></i>
-        </a>
-      </li>
-      <li class="list-inline-item">
-        <a class="text-white" href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
-          <i class="fa-brands fa-facebook fa-lg"></i>
-        </a>
-      </li>
-    </ul>
-    <div class="text-center">
-      <p class="mb-2">Follow me on social media for the latest updates and news.</p>
-      <p class="mb-0">123 Innovation Way, Birmingham, B1 1AA, UK</p>
-      <p class="mb-0">
-        Phone: +44 1234 567890 | Email:
-        <a href="mailto:info@zenithit.co.uk" class="text-white">info@zenithit.co.uk</a>
-      </p>
-    </div>
-    <!-- Copyright at the Bottom Center -->
-    <div class="text-center mt-3">
-      <p class="mb-0">&copy; 2025 Zenith IT. All rights reserved.</p>
-    </div>
-  </div>
-</footer>
+    <!-- Footer -->
+    <footer class="py-4 bg-dark text-white">
+      <div class="container">
+        <!-- Logo at the Top Center -->
+        <div class="text-center mb-3">
+          <img src="assets/images/Logo/SVG/Logo/logo-white.svg" alt="Zenith IT Logo" height="30" />
+        </div>
+        <!-- Footer Navigation Links -->
+        <ul class="list-inline text-center">
+          <li class="list-inline-item">
+            <a class="text-white text-decoration-none" href="index.html#hero">Home</a>
+          </li>
+          <li class="list-inline-item">
+            <a class="text-white text-decoration-none" href="index.html#about">About Me</a>
+          </li>
+          <li class="list-inline-item">
+            <a class="text-white text-decoration-none" href="index.html#services">Services</a>
+          </li>
+          <li class="list-inline-item">
+            <a class="text-white text-decoration-none" href="service-it-strategy.html">IT Strategy Consulting</a>
+          </li>
+          <li class="list-inline-item">
+            <a class="text-white text-decoration-none" href="service-cloud-solutions.html">Cloud Solutions</a>
+          </li>
+          <li class="list-inline-item">
+            <a class="text-white text-decoration-none" href="service-managed-it.html">Managed IT Services</a>
+          </li>
+          <li class="list-inline-item">
+            <a class="text-white text-decoration-none" href="index.html#contact">Contact</a>
+          </li>
+          <li class="list-inline-item">
+            <a class="text-white text-decoration-none" href="privacy-policy.html">Privacy Policy</a>
+          </li>
+          <li class="list-inline-item">
+            <a class="text-white text-decoration-none" href="terms-of-service.html">Terms of Service</a>
+          </li>
+          <li class="list-inline-item">
+            <a class="text-white text-decoration-none" href="sitemap.html">Sitemap</a>
+          </li>
+        </ul>
+        <!-- Social Links & Additional Info -->
+        <ul class="list-inline mb-2 text-center">
+          <li class="list-inline-item">
+            <a class="text-white" href="https://www.linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
+              <i class="fa-brands fa-linkedin fa-lg"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="text-white" href="https://www.x.com" target="_blank" rel="noopener" aria-label="X">
+              <i class="fa-brands fa-x-twitter fa-lg"></i>
+            </a>
+          </li>
+          <li class="list-inline-item">
+            <a class="text-white" href="https://www.facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+              <i class="fa-brands fa-facebook fa-lg"></i>
+            </a>
+          </li>
+        </ul>
+        <div class="text-center">
+          <p class="mb-2">Follow me on social media for the latest updates and news.</p>
+          <p class="mb-0">123 Innovation Way, Birmingham, B1 1AA, UK</p>
+          <p class="mb-0">
+            Phone: +44 1234 567890 | Email:
+            <a href="mailto:info@zenithit.co.uk" class="text-white">info@zenithit.co.uk</a>
+          </p>
+        </div>
+        <!-- Copyright at the Bottom Center -->
+        <div class="text-center mt-3">
+          <p class="mb-0">&copy; 2025 Zenith IT. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
 
     <!-- Bootstrap JS Bundle -->
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -440,58 +440,64 @@
       }
       window.onload = initMap;
     </script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const navbar = document.querySelector('.navbar');
-  const hero = document.querySelector('#hero');
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const navbar = document.querySelector('.navbar');
+        const hero = document.querySelector('#hero');
 
-  window.addEventListener('scroll', function() {
-    if (window.scrollY > hero.offsetHeight) {
-      navbar.classList.add('navbar-shrink');
-    } else {
-      navbar.classList.remove('navbar-shrink');
-    }
-  });
+        window.addEventListener('scroll', function() {
+          if (window.scrollY > hero.offsetHeight) {
+            navbar.classList.add('navbar-shrink');
+          } else {
+            navbar.classList.remove('navbar-shrink');
+          }
+        });
 
-  // Trigger scroll event once to initialize state
-  window.dispatchEvent(new Event('scroll'));
-});
-</script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const toggler = document.querySelector('.navbar-toggler');
-    toggler.addEventListener('click', function() {
-      this.classList.toggle('open');
-    });
-
-    const dropdownToggles = document.querySelectorAll('.nav-link[data-bs-toggle="collapse"]');
-    dropdownToggles.forEach(toggle => {
-      toggle.addEventListener('click', function() {
-        const chevron = this.querySelector('.fa-chevron-down');
-        chevron.classList.toggle('rotate');
+        // Trigger scroll event once to initialize state
+        window.dispatchEvent(new Event('scroll'));
       });
-    });
-  });
-</script>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-  const sections = document.querySelectorAll('section');
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const toggler = document.querySelector('.navbar-toggler');
+        toggler.addEventListener('click', function() {
+          this.classList.toggle('open');
+        });
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.style.opacity = '1';
-        observer.unobserve(entry.target);
-      }
-    });
-  }, {
-    threshold: 0.1
-  });
-
-  sections.forEach(section => {
-    observer.observe(section);
-  });
-});
-</script>
+        const dropdownToggles = document.querySelectorAll('.nav-link[data-bs-toggle="collapse"]');
+        dropdownToggles.forEach(toggle => {
+          toggle.addEventListener('click', function() {
+            const chevron = this.querySelector('.fa-chevron-down');
+            if(chevron) {
+              chevron.classList.toggle('rotate');
+            }
+          });
+        });
+      });
+    </script>
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const sections = document.querySelectorAll('section');
+        const observer = new IntersectionObserver((entries) => {
+          entries.forEach(entry => {
+            if (entry.isIntersecting) {
+              entry.target.style.opacity = '1';
+              observer.unobserve(entry.target);
+            }
+          });
+        }, {
+          threshold: 0.1
+        });
+        sections.forEach(section => {
+          observer.observe(section);
+        });
+      });
+    </script>
+    <!-- Dark Mode Toggle Script -->
+    <script>
+      document.getElementById('darkModeToggle').addEventListener('click', function() {
+        document.body.classList.toggle('dark-mode');
+      });
+    </script>
   </body>
 </html>
