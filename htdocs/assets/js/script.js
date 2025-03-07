@@ -64,16 +64,35 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(section);
   });
 
-  // Dark Mode Toggle with Icon Change
-  document.getElementById("darkModeToggle").addEventListener("click", function () {
-    document.body.classList.toggle("dark-mode");
-    const icon = this.querySelector("i");
-    if (document.body.classList.contains("dark-mode")) {
-      icon.classList.remove("fa-moon");
-      icon.classList.add("fa-sun");
-    } else {
-      icon.classList.remove("fa-sun");
-      icon.classList.add("fa-moon");
+
+// Dark mode toggle script
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const darkModeToggle = document.getElementById("darkModeToggle");
+    const darkModeText = document.getElementById("darkModeText");
+    const body = document.body;
+    const icon = darkModeToggle.querySelector("i");
+
+    // Check local storage for saved mode and apply
+    if (localStorage.getItem("darkMode") === "enabled") {
+      body.classList.add("dark-mode");
+      darkModeText.textContent = "Day Mode";
+      icon.classList.replace("fa-moon", "fa-sun");
     }
+
+    darkModeToggle.addEventListener("click", function () {
+      body.classList.toggle("dark-mode");
+
+      if (body.classList.contains("dark-mode")) {
+        darkModeText.textContent = "Day Mode";
+        icon.classList.replace("fa-moon", "fa-sun");
+        localStorage.setItem("darkMode", "enabled");
+      } else {
+        darkModeText.textContent = "Night Mode";
+        icon.classList.replace("fa-sun", "fa-moon");
+        localStorage.setItem("darkMode", "disabled");
+      }
+    });
   });
-});
+</script>
