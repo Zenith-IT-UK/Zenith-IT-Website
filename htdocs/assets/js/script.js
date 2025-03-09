@@ -95,4 +95,14 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-</script>
+</script> 
+
+document.getElementById('darkModeToggle').addEventListener('click', function() {
+  document.body.classList.toggle('dark-mode');
+  const darkModeText = document.getElementById('darkModeText');
+  if (document.body.classList.contains('dark-mode')) {
+    darkModeText.textContent = 'Light Mode';
+  } else {
+    darkModeText.textContent = 'Dark Mode';
+  }
+});
