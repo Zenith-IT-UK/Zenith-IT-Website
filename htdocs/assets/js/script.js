@@ -64,45 +64,56 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(section);
   });
 
+  // Dark mode toggle script
+  const darkModeToggleDesktop = document.getElementById("darkModeToggleDesktop");
+  const darkModeToggleMobile = document.getElementById("darkModeToggleMobile");
+  const darkModeTextDesktop = document.getElementById("darkModeTextDesktop");
+  const darkModeTextMobile = document.getElementById("darkModeTextMobile");
+  const body = document.body;
+  const iconDesktop = darkModeToggleDesktop.querySelector("i");
+  const iconMobile = darkModeToggleMobile.querySelector("i");
 
-// Dark mode toggle script
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const darkModeToggle = document.getElementById("darkModeToggle");
-    const darkModeText = document.getElementById("darkModeText");
-    const body = document.body;
-    const icon = darkModeToggle.querySelector("i");
-
-    // Check local storage for saved mode and apply
-    if (localStorage.getItem("darkMode") === "enabled") {
-      body.classList.add("dark-mode");
-      darkModeText.textContent = "Day Mode";
-      icon.classList.replace("fa-moon", "fa-sun");
-    }
-
-    darkModeToggle.addEventListener("click", function () {
-      body.classList.toggle("dark-mode");
-
-      if (body.classList.contains("dark-mode")) {
-        darkModeText.textContent = "Day Mode";
-        icon.classList.replace("fa-moon", "fa-sun");
-        localStorage.setItem("darkMode", "enabled");
-      } else {
-        darkModeText.textContent = "Night Mode";
-        icon.classList.replace("fa-sun", "fa-moon");
-        localStorage.setItem("darkMode", "disabled");
-      }
-    });
-  });
-</script> 
-
-document.getElementById('darkModeToggle').addEventListener('click', function() {
-  document.body.classList.toggle('dark-mode');
-  const darkModeText = document.getElementById('darkModeText');
-  if (document.body.classList.contains('dark-mode')) {
-    darkModeText.textContent = 'Light Mode';
-  } else {
-    darkModeText.textContent = 'Dark Mode';
+  // Check local storage for saved mode and apply
+  if (localStorage.getItem("darkMode") === "enabled" || 
+      (!localStorage.getItem("darkMode") && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
+    body.classList.add("dark-mode");
+    darkModeTextDesktop.textContent = "Day Mode";
+    darkModeTextMobile.textContent = "Day Mode";
+    iconDesktop.classList.replace("fa-moon", "fa-sun");
+    iconMobile.classList.replace("fa-moon", "fa-sun");
   }
+
+  function toggleDarkMode() {
+    body.classList.toggle("dark-mode");
+
+    if (body.classList.contains("dark-mode")) {
+      darkModeTextDesktop.textContent = "Day Mode";
+      darkModeTextMobile.textContent = "Day Mode";
+      iconDesktop.classList.replace("fa-moon", "fa-sun");
+      iconMobile.classList.replace("fa-moon", "fa-sun");
+      localStorage.setItem("darkMode", "enabled");
+    } else {
+      darkModeTextDesktop.textContent = "Night Mode";
+      darkModeTextMobile.textContent = "Night Mode";
+      iconDesktop.classList.replace("fa-sun", "fa-moon");
+      iconMobile.classList.replace("fa-sun", "fa-moon");
+      localStorage.setItem("darkMode", "disabled");
+    }
+  }
+
+  darkModeToggleDesktop.addEventListener("click", toggleDarkMode);
+  darkModeToggleMobile.addEventListener("click", toggleDarkMode);
+
+  // Cookie Disclaimer
+  const cookieDisclaimer = document.getElementById("cookieDisclaimer");
+  const acceptCookiesButton = document.getElementById("acceptCookies");
+
+  if (!localStorage.getItem("cookiesAccepted")) {
+    cookieDisclaimer.style.display = "flex";
+  }
+
+  acceptCookiesButton.addEventListener("click", function () {
+    localStorage.setItem("cookiesAccepted", "true");
+    cookieDisclaimer.style.display = "none";
+  });
 });

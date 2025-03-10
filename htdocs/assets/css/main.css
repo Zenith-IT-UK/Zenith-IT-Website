@@ -150,7 +150,7 @@ html {
 @media (min-width: 992px) {
   .hero {
     height: 600px;
-    min-height: auto;
+    min-height: initial;
   }
 }
 
@@ -461,7 +461,7 @@ section h2::after {
 
 /* Footer */
 footer {
-  background-color: #f8f9fa;
+  background-color: #343a40; /* Dark grey color */
   padding: 2rem 0;
   text-align: center;
   color: #6c757d;
@@ -537,4 +537,88 @@ section {
   background-color: #fff;
   color: #0099CC;
   border-color: #0099CC;
+}
+
+/* Dark Mode Styles */
+.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+.dark-mode a {
+  color: #90caf9;
+}
+
+/* In dark mode, the navbar uses a grey overlay */
+.dark-mode .navbar {
+  background-color: rgba(50, 50, 50, 0.8);
+}
+
+/* Override shrunk navbar in dark mode */
+.dark-mode .navbar-shrink {
+  background-color: rgba(50, 50, 50, 0.8) !important;
+}
+
+/* Dark mode footer */
+.dark-mode footer {
+  background-color: #343a40; /* Dark grey color */
+}
+
+/* Dark mode services section background */
+.dark-mode #services {
+  background-color: #2a2a2a;
+}
+
+/* Dark mode form entry boxes */
+.dark-mode .contact-form input,
+.dark-mode .contact-form textarea {
+  background-color: #333;
+  color: #e0e0e0;
+  border-color: #555;
+}
+
+.dark-mode .contact-form input:focus,
+.dark-mode .contact-form textarea:focus {
+  border-color: #0099CC;
+}
+
+/* Reduce brightness of hero image in dark mode */
+.dark-mode .hero-background {
+  filter: brightness(0.5);
+}
+
+/* Dark mode service card background */
+.dark-mode .service-card {
+  background: #333;
+  color: #e0e0e0;
+}
+
+/* Cookie Disclaimer */
+.cookie-disclaimer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cookie-disclaimer p {
+  margin: 0;
+  flex: 1;
+}
+
+.cookie-disclaimer a {
+  color: #90caf9;
+  text-decoration: underline;
+}
+
+.cookie-disclaimer button {
+  margin-left: 1rem;
 }

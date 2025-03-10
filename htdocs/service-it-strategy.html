@@ -4,102 +4,178 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>IT Strategy Consulting - Zenith IT</title>
+    <meta
+      name="description"
+      content="Zenith IT offers expert IT strategy consulting services to help businesses align their IT infrastructure with their business goals."
+    />
+    <!-- Bootstrap CSS -->
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <!-- Font Awesome for social icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
+    <!-- Main CSS -->
     <link rel="stylesheet" href="assets/css/main.css" />
+    <!-- Favicon and Apple Touch Icons -->
+    <link rel="apple-touch-icon" sizes="57x57" href="assets/images/icons/apple-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="assets/images/icons/apple-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="assets/images/icons/apple-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="assets/images/icons/apple-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/images/icons/apple-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="assets/images/icons/apple-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="assets/images/icons/apple-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="assets/images/icons/apple-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/images/icons/apple-icon-180x180.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="assets/images/icons/android-icon-192x192.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/icons/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="assets/images/icons/favicon-96x96.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/images/icons/favicon-16x16.png" />
+    <link rel="manifest" href="assets/images/icons/manifest.json" />
+    <meta name="msapplication-TileColor" content="#ffffff" />
+    <meta name="msapplication-TileImage" content="assets/images/icons/ms-icon-144x144.png" />
+    <meta name="theme-color" content="#ffffff" />
   </head>
   <body>
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main Navigation">
       <div class="container">
-        <a class="navbar-brand" href="index.html">
+        <a class="navbar-brand" href="index.html#hero">
           <img src="assets/images/Logo/SVG/Logo/logo-color.svg" alt="Zenith IT Logo" height="40" />
         </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="toggler-icon"></span>
+          <span class="toggler-icon"></span>
+          <span class="toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
           <ul class="navbar-nav">
+            <!-- Home (anchor to hero section) -->
             <li class="nav-item">
-              <a class="nav-link" href="index.html#hero">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="index.html#about">About Me</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Services
+              <a class="nav-link" href="index.html#hero">
+                <i class="fa-solid fa-house"></i> Home
               </a>
-              <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
-                <li>
-                  <a class="dropdown-item" href="service-it-strategy.html">IT Strategy Consulting</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="service-cloud-solutions.html">Cloud Solutions</a>
-                </li>
-                <li>
-                  <a class="dropdown-item" href="service-managed-it.html">Managed IT Services</a>
-                </li>
-              </ul>
             </li>
+            <!-- About Me -->
             <li class="nav-item">
-              <a class="nav-link" href="index.html#contact">Contact</a>
+              <a class="nav-link" href="index.html#about">
+                <i class="fa-solid fa-info-circle"></i> About Me
+              </a>
             </li>
+            <!-- Services Dropdown for Desktop -->
             <li class="nav-item dropdown d-none d-lg-block">
-              <a class="nav-link dropdown-toggle" href="#" id="legalDropdownDesktop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                Legal
+              <a class="nav-link dropdown-toggle" href="#" id="servicesDropdownDesktop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-cogs"></i> Services
               </a>
-              <ul class="dropdown-menu" aria-labelledby="legalDropdownDesktop">
+              <ul class="dropdown-menu" aria-labelledby="servicesDropdownDesktop">
                 <li>
-                  <a class="dropdown-item" href="privacy-policy.html">
-                    <i class="fa-solid fa-user-secret me-2"></i>Privacy Policy
+                  <a class="dropdown-item" href="service-it-strategy.html">
+                    <i class="fa-solid fa-lightbulb me-2"></i>IT Strategy Consulting
                   </a>
                 </li>
                 <li>
-                  <a class="dropdown-item" href="terms-of-service.html">
-                    <i class="fa-solid fa-file-contract me-2"></i>Terms of Service
+                  <a class="dropdown-item" href="service-cloud-solutions.html">
+                    <i class="fa-solid fa-cloud me-2"></i>Cloud Solutions
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="service-managed-it.html">
+                    <i class="fa-solid fa-server me-2"></i>Managed IT Services
                   </a>
                 </li>
               </ul>
             </li>
+            <!-- Services Dropdown for Mobile -->
             <li class="nav-item d-block d-lg-none">
-              <a class="nav-link" data-bs-toggle="collapse" href="#legalCollapse" role="button" aria-expanded="false" aria-controls="legalCollapse">
-                Legal
+              <a class="nav-link" data-bs-toggle="collapse" href="#servicesCollapse" role="button" aria-expanded="false" aria-controls="servicesCollapse">
+                <i class="fa-solid fa-cogs me-2"></i> Services <i class="fa-solid fa-chevron-down ms-2"></i>
               </a>
-              <div class="collapse" id="legalCollapse">
+              <div class="collapse" id="servicesCollapse">
                 <ul class="navbar-nav ps-3">
                   <li class="nav-item">
-                    <a class="nav-link" href="privacy-policy.html">
-                      <i class="fa-solid fa-user-secret me-2"></i>Privacy Policy
+                    <a class="nav-link" href="service-it-strategy.html">
+                      <i class="fa-solid fa-lightbulb me-2"></i> IT Strategy Consulting
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="terms-of-service.html">
-                      <i class="fa-solid fa-file-contract me-2"></i>Terms of Service
+                    <a class="nav-link" href="service-cloud-solutions.html">
+                      <i class="fa-solid fa-cloud me-2"></i> Cloud Solutions
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="service-managed-it.html">
+                      <i class="fa-solid fa-server me-2"></i> Managed IT Services
                     </a>
                   </li>
                 </ul>
               </div>
             </li>
+            <!-- Contact -->
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#contact">
+                <i class="fa-solid fa-envelope"></i> Contact
+              </a>
+            </li>
+            <!-- Legal Dropdown for Desktop -->
+            <li class="nav-item dropdown d-none d-lg-block">
+              <a class="nav-link dropdown-toggle" href="#" id="legalDropdownDesktop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fa-solid fa-gavel me-2"></i> Legal
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="legalDropdownDesktop">
+                <li>
+                  <a class="dropdown-item" href="privacy-policy.html">
+                    <i class="fa-solid fa-user-secret me-2"></i> Privacy Policy
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" href="terms-of-service.html">
+                    <i class="fa-solid fa-file-contract me-2"></i> Terms of Service
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <!-- Legal Dropdown for Mobile -->
+            <li class="nav-item d-block d-lg-none">
+              <a class="nav-link" data-bs-toggle="collapse" href="#legalCollapse" role="button" aria-expanded="false" aria-controls="legalCollapse">
+                <i class="fa-solid fa-gavel me-2"></i> Legal <i class="fa-solid fa-chevron-down ms-2"></i>
+              </a>
+              <div class="collapse" id="legalCollapse">
+                <ul class="navbar-nav ps-3">
+                  <li class="nav-item">
+                    <a class="nav-link" href="privacy-policy.html">
+                      <i class="fa-solid fa-user-secret me-2"></i> Privacy Policy
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="terms-of-service.html">
+                      <i class="fa-solid fa-file-contract me-2"></i> Terms of Service
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <!-- Dark Mode Toggle Button for Mobile -->
+            <li class="nav-item d-block d-lg-none">
+              <button id="darkModeToggleMobile" class="btn custom-dark-toggle w-100 mt-2" aria-label="Toggle dark mode">
+                <i class="fa-solid fa-moon"></i> <span id="darkModeTextMobile">Light Mode</span>
+              </button>
+            </li>
           </ul>
+          <!-- Dark Mode Toggle Button for Desktop -->
+          <button id="darkModeToggleDesktop" class="btn custom-dark-toggle ms-3 d-none d-lg-block" aria-label="Toggle dark mode">
+            <i class="fa-solid fa-moon"></i> <span id="darkModeTextDesktop">Light Mode</span>
+          </button>
         </div>
       </div>
     </nav>
@@ -269,6 +345,11 @@
       </div>
     </footer>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Bootstrap JS Bundle -->
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Google Maps API -->
+    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQSsmzhQpNGcHFCucuALZm8ZWiHpbu1FA"></script>
+    <!-- External JS -->
+    <script defer src="assets/js/script.js"></script>
   </body>
 </html>

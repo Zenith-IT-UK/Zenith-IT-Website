@@ -45,44 +45,6 @@
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="assets/images/icons/ms-icon-144x144.png" />
     <meta name="theme-color" content="#ffffff" />
-    <!-- Dark Mode Inline Overrides -->
-    <style>
-      /* Dark Mode Styles */
-      .dark-mode {
-        background-color: #121212;
-        color: #e0e0e0;
-      }
-      .dark-mode a {
-        color: #90caf9;
-      }
-      /* In dark mode, the navbar uses a grey overlay */
-      .dark-mode .navbar {
-        background-color: rgba(50, 50, 50, 0.8);
-      }
-      /* Override shrunk navbar in dark mode */
-      .dark-mode .navbar-shrink {
-        background-color: rgba(50, 50, 50, 0.8) !important;
-      }
-      /* Dark mode footer */
-      .dark-mode footer {
-        background-color: rgba(50, 50, 50, 0.8);
-      }
-      /* Dark mode services section background */
-      .dark-mode #services {
-        background-color: #2a2a2a;
-      }
-      /* Dark mode form entry boxes */
-      .dark-mode .contact-form input,
-      .dark-mode .contact-form textarea {
-        background-color: #333;
-        color: #e0e0e0;
-        border-color: #555;
-      }
-      .dark-mode .contact-form input:focus,
-      .dark-mode .contact-form textarea:focus {
-        border-color: #0099CC;
-      }
-    </style>
   </head>
   <body>
     <!-- Navigation -->
@@ -91,10 +53,6 @@
         <a class="navbar-brand" href="#hero">
           <img src="assets/images/Logo/SVG/Logo/logo-color.svg" alt="Zenith IT Logo" height="40" />
         </a>
-        <!-- Dark Mode Toggle Button -->
-<button id="darkModeToggle" class="btn custom-dark-toggle ms-auto me-2" aria-label="Toggle dark mode">
-  <i class="fa-solid fa-moon"></i> <span id="darkModeText">Dark Mode</span>
-</button>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="toggler-icon"></span>
@@ -207,7 +165,17 @@
                 </ul>
               </div>
             </li>
+            <!-- Dark Mode Toggle Button for Mobile -->
+            <li class="nav-item d-block d-lg-none">
+              <button id="darkModeToggleMobile" class="btn custom-dark-toggle w-100 mt-2" aria-label="Toggle dark mode">
+                <i class="fa-solid fa-moon"></i> <span id="darkModeTextMobile">Light Mode</span>
+              </button>
+            </li>
           </ul>
+          <!-- Dark Mode Toggle Button for Desktop -->
+          <button id="darkModeToggleDesktop" class="btn custom-dark-toggle ms-3 d-none d-lg-block" aria-label="Toggle dark mode">
+            <i class="fa-solid fa-moon"></i> <span id="darkModeTextDesktop">Light Mode</span>
+          </button>
         </div>
       </div>
     </nav>
@@ -443,6 +411,15 @@
         </div>
       </div>
     </footer>
+
+    <!-- Cookie Disclaimer -->
+    <div id="cookieDisclaimer" class="cookie-disclaimer">
+      <p>
+        We use cookies to ensure you get the best experience on our website. 
+        <a href="privacy-policy.html">Learn more</a>
+      </p>
+      <button id="acceptCookies" class="btn btn-primary">Accept</button>
+    </div>
 
     <!-- Bootstrap JS Bundle -->
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
