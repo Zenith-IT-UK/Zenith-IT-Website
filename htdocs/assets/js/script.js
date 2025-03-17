@@ -107,9 +107,13 @@ document.addEventListener("DOMContentLoaded", function () {
   // Cookie Disclaimer
   const cookieDisclaimer = document.getElementById("cookieDisclaimer");
   const acceptCookiesButton = document.getElementById("acceptCookies");
-  const declineCookiesButton = document.getElementById("declineCookies");s
+  const declineCookiesButton = document.getElementById("declineCookies");
   const settingsCookiesButton = document.getElementById("settingsCookies");
   const cookieOverlay = document.getElementById("cookieOverlay");
+  // Retrieve the settings menu and its buttons
+  const cookieSettingsMenu = document.getElementById("cookieSettingsMenu");
+  const backToConsentButton = document.getElementById("backToConsent");
+  const saveCookieSettingsButton = document.getElementById("saveCookieSettings");
 
   if (!localStorage.getItem("cookiesAccepted")) {
     cookieDisclaimer.style.display = "flex";
@@ -137,7 +141,25 @@ document.addEventListener("DOMContentLoaded", function () {
     fadeOutConsent();
   });
 
+  // Toggle the Cookie Settings Menu without redirecting
   settingsCookiesButton.addEventListener("click", function () {
-    window.location.href = "privacy-policy.html"; // or open a modal with more settings
+    cookieSettingsMenu.style.display = "block";
+    const consentActions = document.querySelector(".cookie-actions");
+    if (consentActions) consentActions.style.display = "none";
+  });
+
+  // Back button returns to default consent view
+  backToConsentButton.addEventListener("click", function () {
+    cookieSettingsMenu.style.display = "none";
+    const consentActions = document.querySelector(".cookie-actions");
+    if (consentActions) consentActions.style.display = "flex";
+  });
+
+  // Save Settings just hides the settings menu (and could store individual settings)
+  saveCookieSettingsButton.addEventListener("click", function () {
+    // Optional: Save individual settings in localStorage here.
+    cookieSettingsMenu.style.display = "none";
+    const consentActions = document.querySelector(".cookie-actions");
+    if (consentActions) consentActions.style.display = "flex";
   });
 });
