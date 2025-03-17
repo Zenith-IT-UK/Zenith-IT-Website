@@ -107,37 +107,22 @@ document.addEventListener("DOMContentLoaded", function () {
   // Cookie Disclaimer
   const cookieDisclaimer = document.getElementById("cookieDisclaimer");
   const acceptCookiesButton = document.getElementById("acceptCookies");
-  const declineCookiesButton = document.getElementById("declineCookies");s
-  const settingsCookiesButton = document.getElementById("settingsCookies");
+  const declineCookiesButton = document.getElementById("declineCookies");
   const cookieOverlay = document.getElementById("cookieOverlay");
 
   if (!localStorage.getItem("cookiesAccepted")) {
     cookieDisclaimer.style.display = "flex";
     cookieOverlay.style.display = "block";
-    document.body.classList.add("blur");
-  }
-
-  function fadeOutConsent() {
-    cookieDisclaimer.style.opacity = "0";
-    cookieOverlay.style.opacity = "0";
-    setTimeout(() => {
-      cookieDisclaimer.style.display = "none";
-      cookieOverlay.style.display = "none";
-      document.body.classList.remove("blur");
-    }, 500); // matches CSS fade duration
   }
 
   acceptCookiesButton.addEventListener("click", function () {
     localStorage.setItem("cookiesAccepted", "true");
-    fadeOutConsent();
+    cookieDisclaimer.style.display = "none";
+    cookieOverlay.style.display = "none";
   });
 
   declineCookiesButton.addEventListener("click", function () {
-    localStorage.setItem("cookiesAccepted", "false");
-    fadeOutConsent();
-  });
-
-  settingsCookiesButton.addEventListener("click", function () {
-    window.location.href = "privacy-policy.html"; // or open a modal with more settings
+    cookieDisclaimer.style.display = "none";
+    cookieOverlay.style.display = "none";
   });
 });

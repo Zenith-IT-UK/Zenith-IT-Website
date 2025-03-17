@@ -414,12 +414,36 @@
 
     <!-- Cookie Disclaimer -->
     <div id="cookieDisclaimer" class="cookie-disclaimer">
+      <h3>Cookie Consent</h3>
       <p>
-        We use cookies to ensure you get the best experience on our website. 
+        We use cookies to personalize your experience, analyze site traffic, and provide social media features.
         <a href="privacy-policy.html">Learn more</a>
       </p>
-      <button id="acceptCookies" class="btn btn-primary">Accept</button>
+      <div class="cookie-actions">
+        <button id="acceptCookies" class="btn btn-primary">Accept</button>
+        <button id="declineCookies" class="btn btn-secondary">Decline</button>
+        <button id="settingsCookies" class="btn btn-outline-primary">Cookie Settings</button>
+      </div>
+      <!-- Hidden settings menu -->
+      <div id="cookieSettingsMenu" class="cookie-settings-menu" style="display: none;">
+        <h4>Cookie Settings</h4>
+        <label>
+          <input type="checkbox" id="analyticsCookies" /> Analytics Cookies
+        </label>
+        <label>
+          <input type="checkbox" id="personalizationCookies" /> Personalization Cookies
+        </label>
+        <label>
+          <input type="checkbox" id="marketingCookies" /> Marketing Cookies
+        </label>
+        <div class="settings-actions">
+          <button id="saveCookieSettings" class="btn btn-primary">Save Settings</button>
+          <button id="backToConsent" class="btn btn-secondary">Back</button>
+        </div>
+      </div>
     </div>
+    <!-- Overlay to blur the page content -->
+    <div id="cookieOverlay" class="cookie-overlay"></div>
 
     <!-- Bootstrap JS Bundle -->
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
