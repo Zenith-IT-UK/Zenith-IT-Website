@@ -484,22 +484,13 @@ footer {
   background-color: #343a40; /* Dark grey color */
   padding: 2rem 0;
   text-align: center;
-  color: #6c757d;
+  color: #ffffff; /* Updated for higher contrast */
   font-size: 0.8rem;
 }
 
-.footer-nav,
-.footer-social {
-  list-style: none;
-  padding: 0;
-  margin: 0.5rem 0;
-  display: flex;
-  justify-content: center;
-  gap: 1.5rem;
-}
-
+/* Update footer link colors */
 .footer-nav a {
-  color: #0099CC;
+  color: #ffffff;
   font-weight: 500;
   transition: color 0.3s ease;
 }
@@ -510,7 +501,7 @@ footer {
 
 .footer-social a {
   font-size: 1.25rem;
-  color: #0099CC;
+  color: #ffffff;
   transition: color 0.3s ease;
 }
 
@@ -600,6 +591,12 @@ section {
 .dark-mode .contact-form input:focus,
 .dark-mode .contact-form textarea:focus {
   border-color: #0099CC;
+}
+
+/* Add dark mode placeholder styling */
+.dark-mode .contact-form input::placeholder,
+.dark-mode .contact-form textarea::placeholder {
+  color: #ccc;
 }
 
 /* Reduce brightness of hero image in dark mode */
