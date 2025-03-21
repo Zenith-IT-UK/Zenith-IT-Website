@@ -134,6 +134,27 @@ html {
   color: #000;
 }
 
+/* Desktop Dropdown Adjustments */
+@media (min-width: 992px) {
+  /* Override desktop dropdown menu positioning */
+  .navbar-nav .dropdown-menu {
+    position: absolute;
+    top: 100%; /* Place menu directly below nav bar */
+    left: 0;
+    margin-top: 0.5rem; /* Slight gap */
+    transform: none; /* Remove previous translateY offset */
+    opacity: 0;
+    display: block; /* Ensure proper block display when visible */
+    transition: opacity 0.3s ease;
+  }
+  
+  /* When the dropdown is active, show the menu below */
+  .navbar-nav .dropdown-menu.show,
+  .navbar-nav .dropdown:hover .dropdown-menu {
+    opacity: 1;
+  }
+}
+
 /* Hero Section */
 .hero {
   position: relative;
@@ -592,61 +613,50 @@ section {
   color: #e0e0e0;
 }
 
-/* Updated Cookie Disclaimer */
+/* Updated Cookie Disclaimer Banner */
 .cookie-disclaimer {
   position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 90%;
-  max-width: 500px;
-  background-color: rgba(0, 0, 0, 0.95);
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0,0,0,0.95);
   color: #fff;
-  text-align: center;
-  padding: 2rem;
+  padding: 1rem;
   z-index: 1001;
   display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  animation: fadeIn 0.5s ease-out;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
 }
 
-.cookie-disclaimer h3 {
+/* Inner content wrapper to allow spacing between text and actions */
+.cookie-content {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.cookie-content p {
   margin: 0;
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 0.9rem;
 }
 
-.cookie-disclaimer p {
-  margin: 0;
-  font-size: 1rem;
+.cookie-actions button {
+  margin-left: 0.5rem;
 }
 
-.cookie-disclaimer a {
-  color: #90caf9;
-  text-decoration: underline;
+/* Cookie Settings Menu remains unchanged except it now appears within the banner */
+.cookie-settings-menu {
+  margin-top: 1rem;
+  text-align: left;
+  border-top: 1px solid currentColor;
+  padding-top: 1rem;
+  width: 100%;
 }
 
-.cookie-disclaimer button {
-  margin: 0.3rem;
-}
-
-/* Style for Cookie Settings Button */
-.btn-outline-primary {
-  background: transparent;
-  border: 2px solid #0099CC;
-  color: #0099CC;
-  transition: all 0.3s ease;
-}
-
-.btn-outline-primary:hover {
-  background-color: #0099CC;
-  color: #fff;
-}
-
-/* Updated Overlay to blur the page content */
+/* Updated Overlay to blur the page content remains unchanged */
 .cookie-overlay {
   position: fixed;
   top: 0;
@@ -656,6 +666,7 @@ section {
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1000;
   backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
   animation: fadeIn 0.5s ease-out;
   display: none;
 }

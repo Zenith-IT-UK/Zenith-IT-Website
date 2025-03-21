@@ -110,15 +110,21 @@ document.addEventListener("DOMContentLoaded", function () {
   const declineCookiesButton = document.getElementById("declineCookies");
   const settingsCookiesButton = document.getElementById("settingsCookies");
   const cookieOverlay = document.getElementById("cookieOverlay");
-  // Retrieve the settings menu and its buttons
   const cookieSettingsMenu = document.getElementById("cookieSettingsMenu");
   const backToConsentButton = document.getElementById("backToConsent");
   const saveCookieSettingsButton = document.getElementById("saveCookieSettings");
 
-  if (!localStorage.getItem("cookiesAccepted")) {
+  // Check for existing cookie choice
+  const cookieChoice = localStorage.getItem("cookiesAccepted");
+  if (cookieChoice === null) {
     cookieDisclaimer.style.display = "flex";
     cookieOverlay.style.display = "block";
     document.body.classList.add("blur");
+  } else {
+    // If a choice exists, hide the cookie banner
+    cookieDisclaimer.style.display = "none";
+    cookieOverlay.style.display = "none";
+    document.body.classList.remove("blur");
   }
 
   function fadeOutConsent() {
@@ -128,7 +134,7 @@ document.addEventListener("DOMContentLoaded", function () {
       cookieDisclaimer.style.display = "none";
       cookieOverlay.style.display = "none";
       document.body.classList.remove("blur");
-    }, 500); // matches CSS fade duration
+    }, 500);
   }
 
   acceptCookiesButton.addEventListener("click", function () {
