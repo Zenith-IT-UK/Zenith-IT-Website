@@ -65,7 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Intersection Observer for section animation
-  const animateSections = document.querySelectorAll("section.animate-section");
+  const animateElements = document.querySelectorAll(".animate-section"); // updated selector
   const animateObserver = new IntersectionObserver(
     (entries) => {
       entries.forEach(entry => {
@@ -78,8 +78,8 @@ document.addEventListener("DOMContentLoaded", function () {
     },
     { threshold: 0.1 }
   );
-  animateSections.forEach(section => {
-    animateObserver.observe(section);
+  animateElements.forEach(element => {
+    animateObserver.observe(element);
   });
 
   // Dark mode toggle script
