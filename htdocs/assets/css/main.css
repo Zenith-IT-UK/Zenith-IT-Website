@@ -706,3 +706,13 @@ section {
 .settings-actions {
   margin-top: 1rem;
 }
+
+/* Animate Section on Scroll */
+.animate-section {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* When the section is visible, the Intersection Observer in script.js will change these parameters
+   e.g., element.style.opacity = "1" and element.style.transform = "translateY(0)" */

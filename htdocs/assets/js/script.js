@@ -64,6 +64,24 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(section);
   });
 
+  // Intersection Observer for section animation
+  const animateSections = document.querySelectorAll("section.animate-section");
+  const animateObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = "1";
+          entry.target.style.transform = "translateY(0)";
+          animateObserver.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.1 }
+  );
+  animateSections.forEach(section => {
+    animateObserver.observe(section);
+  });
+
   // Dark mode toggle script
   const darkModeToggleDesktop = document.getElementById("darkModeToggleDesktop");
   const darkModeToggleMobile = document.getElementById("darkModeToggleMobile");
