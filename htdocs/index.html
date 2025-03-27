@@ -45,6 +45,10 @@
     <meta name="msapplication-TileColor" content="#ffffff" />
     <meta name="msapplication-TileImage" content="assets/images/icons/ms-icon-144x144.png" />
     <meta name="theme-color" content="#0099CC" />
+
+    <script src="https://web.cmp.usercentrics.eu/modules/autoblocker.js"></script>
+    <script id="usercentrics-cmp" src="https://web.cmp.usercentrics.eu/ui/loader.js" data-settings-id="WoZ0-khIi-7Z6T" async></script>
+
   </head>
   <body>
     <!-- Navigation -->
@@ -412,43 +416,9 @@
       </div>
     </footer>
 
-    <!-- Cookie Disclaimer Banner -->
-    <div id="cookieDisclaimer" class="cookie-disclaimer">
-      <div class="cookie-content">
-        <p>
-          We use cookies to personalize your experience, analyze site traffic, and provide social media features.
-          <a href="privacy-policy.html">Learn more</a>
-        </p>
-        <div class="cookie-actions">
-          <button id="acceptCookies" class="btn btn-primary">Accept</button>
-          <button id="declineCookies" class="btn btn-secondary">Decline</button>
-          <button id="settingsCookies" class="btn btn-outline-primary">Cookie Settings</button>
-        </div>
-      </div>
-      <!-- Hidden Settings Menu -->
-      <div id="cookieSettingsMenu" class="cookie-settings-menu" style="display: none;">
-        <h4>Cookie Settings</h4>
-        <label>
-          <input type="checkbox" id="analyticsCookies" /> Analytics Cookies
-        </label>
-        <label>
-          <input type="checkbox" id="personalizationCookies" /> Personalization Cookies
-        </label>
-        <label>
-          <input type="checkbox" id="marketingCookies" /> Marketing Cookies
-        </label>
-        <div class="settings-actions">
-          <button id="saveCookieSettings" class="btn btn-primary">Save Settings</button>
-          <button id="backToConsent" class="btn btn-secondary">Back</button>
-        </div>
-      </div>
-    </div>
-    <div id="cookieOverlay" class="cookie-overlay"></div>
+    <!-- CookieYes Integration -->
+    <script id="cookieyes" type="text/javascript" src="https://cdn-cookieyes.com/client_data/your_client_id.js"></script>
 
-    <!-- Bootstrap JS Bundle -->
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <!-- Google Maps API -->
-    <script defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDQSsmzhQpNGcHFCucuALZm8ZWiHpbu1FA"></script>
     <!-- External JS -->
     <script defer src="assets/js/script.js"></script>
   </body>

@@ -611,6 +611,7 @@ section {
 }
 
 /* Updated Cookie Disclaimer Banner */
+/*
 .cookie-disclaimer {
   position: fixed;
   bottom: 0;
@@ -625,8 +626,6 @@ section {
   justify-content: center;
   flex-direction: row;
 }
-
-/* Inner content wrapper to allow spacing between text and actions */
 .cookie-content {
   display: flex;
   flex-wrap: wrap;
@@ -634,17 +633,13 @@ section {
   justify-content: space-between;
   width: 100%;
 }
-
 .cookie-content p {
   margin: 0;
   font-size: 0.9rem;
 }
-
 .cookie-actions button {
   margin-left: 0.5rem;
 }
-
-/* Cookie Settings Menu remains unchanged except it now appears within the banner */
 .cookie-settings-menu {
   margin-top: 1rem;
   text-align: left;
@@ -652,8 +647,6 @@ section {
   padding-top: 1rem;
   width: 100%;
 }
-
-/* Updated Overlay to blur the page content remains unchanged */
 .cookie-overlay {
   position: fixed;
   top: 0;
@@ -667,12 +660,7 @@ section {
   animation: fadeIn 0.5s ease-out;
   display: none;
 }
-
-/* Fade in animation */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
+*/
 
 /* Updated Cookie Disclaimer with theme classes */
 .cookie-disclaimer.light-mode {

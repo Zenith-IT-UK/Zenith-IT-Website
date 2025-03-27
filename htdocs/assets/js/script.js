@@ -122,68 +122,14 @@ document.addEventListener("DOMContentLoaded", function () {
   darkModeToggleDesktop.addEventListener("click", toggleDarkMode);
   darkModeToggleMobile.addEventListener("click", toggleDarkMode);
 
-  // Cookie Disclaimer
-  const cookieDisclaimer = document.getElementById("cookieDisclaimer");
-  const acceptCookiesButton = document.getElementById("acceptCookies");
-  const declineCookiesButton = document.getElementById("declineCookies");
-  const settingsCookiesButton = document.getElementById("settingsCookies");
-  const cookieOverlay = document.getElementById("cookieOverlay");
-  const cookieSettingsMenu = document.getElementById("cookieSettingsMenu");
-  const backToConsentButton = document.getElementById("backToConsent");
-  const saveCookieSettingsButton = document.getElementById("saveCookieSettings");
-
-  // Check for existing cookie choice
-  const cookieChoice = localStorage.getItem("cookiesAccepted");
-  if (cookieChoice === null) {
-    cookieDisclaimer.style.display = "flex";
-    cookieOverlay.style.display = "block";
-    document.body.classList.add("blur");
-  } else {
-    // If a choice exists, hide the cookie banner
-    cookieDisclaimer.style.display = "none";
-    cookieOverlay.style.display = "none";
-    document.body.classList.remove("blur");
-  }
-
-  function fadeOutConsent() {
-    cookieDisclaimer.style.opacity = "0";
-    cookieOverlay.style.opacity = "0";
-    setTimeout(() => {
-      cookieDisclaimer.style.display = "none";
-      cookieOverlay.style.display = "none";
-      document.body.classList.remove("blur");
-    }, 500);
-  }
-
-  acceptCookiesButton.addEventListener("click", function () {
-    localStorage.setItem("cookiesAccepted", "true");
-    fadeOutConsent();
-  });
-
-  declineCookiesButton.addEventListener("click", function () {
-    localStorage.setItem("cookiesAccepted", "false");
-    fadeOutConsent();
-  });
-
-  // Toggle the Cookie Settings Menu without redirecting
-  settingsCookiesButton.addEventListener("click", function () {
-    cookieSettingsMenu.style.display = "block";
-    const consentActions = document.querySelector(".cookie-actions");
-    if (consentActions) consentActions.style.display = "none";
-  });
-
-  // Back button returns to default consent view
-  backToConsentButton.addEventListener("click", function () {
-    cookieSettingsMenu.style.display = "none";
-    const consentActions = document.querySelector(".cookie-actions");
-    if (consentActions) consentActions.style.display = "flex";
-  });
-
-  // Save Settings just hides the settings menu (and could store individual settings)
-  saveCookieSettingsButton.addEventListener("click", function () {
-    // Optional: Save individual settings in localStorage here.
-    cookieSettingsMenu.style.display = "none";
-    const consentActions = document.querySelector(".cookie-actions");
-    if (consentActions) consentActions.style.display = "flex";
-  });
+  // Remove custom cookie consent logic
+  // const cookieDisclaimer = document.getElementById("cookieDisclaimer");
+  // const acceptCookiesButton = document.getElementById("acceptCookies");
+  // const declineCookiesButton = document.getElementById("declineCookies");
+  // const settingsCookiesButton = document.getElementById("settingsCookies");
+  // const cookieOverlay = document.getElementById("cookieOverlay");
+  // const cookieSettingsMenu = document.getElementById("cookieSettingsMenu");
+  // const backToConsentButton = document.getElementById("backToConsent");
+  // const saveCookieSettingsButton = document.getElementById("saveCookieSettings");
+  // // ...existing cookie consent check and event listeners...
 });
