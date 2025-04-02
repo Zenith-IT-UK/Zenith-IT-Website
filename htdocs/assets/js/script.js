@@ -47,6 +47,28 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 
+  // Ensure Bootstrap's collapse functionality works for the mobile nav menu
+  const navbarToggler = document.querySelector(".navbar-toggler");
+  const navbarCollapse = document.querySelector("#navbarNav");
+
+  navbarToggler.addEventListener("click", function () {
+    if (navbarCollapse.classList.contains("show")) {
+      navbarCollapse.classList.remove("show");
+    } else {
+      navbarCollapse.classList.add("show");
+    }
+  });
+
+  // Close the mobile menu when a link is clicked
+  const navLinks = document.querySelectorAll(".navbar-nav .nav-link");
+  navLinks.forEach(link => {
+    link.addEventListener("click", function () {
+      if (navbarCollapse.classList.contains("show")) {
+        navbarCollapse.classList.remove("show");
+      }
+    });
+  });
+
   // Intersection Observer for section fade-in effect
   const sections = document.querySelectorAll("section");
   const observer = new IntersectionObserver(
