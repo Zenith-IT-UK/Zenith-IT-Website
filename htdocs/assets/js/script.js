@@ -51,7 +51,14 @@ document.addEventListener("DOMContentLoaded", function () {
   const navbarToggler = document.querySelector(".navbar-toggler");
   const navbarCollapse = document.querySelector("#navbarNav");
 
-  navbarToggler.addEventListener("click", function () {
+  navbarToggler.addEventListener("click", function (event) {
+    // Prevent toggling if the menu is already transitioning
+    if (navbarCollapse.classList.contains("collapsing")) {
+      event.preventDefault();
+      return;
+    }
+
+    // Toggle the menu visibility
     if (navbarCollapse.classList.contains("show")) {
       navbarCollapse.classList.remove("show");
     } else {

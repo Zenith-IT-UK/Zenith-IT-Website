@@ -363,6 +363,7 @@ a:hover {
 }
 
 /* Specific classes (optional if you want distinct classnames) */
+
 .btn-primary {
   /* Inherits from .btn above, but can add differences if needed */
 }
