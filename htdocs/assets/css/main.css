@@ -178,20 +178,12 @@ a:hover {
 .hero {
   position: relative;
   height: 100vh;
-  min-height: 600px;
   display: flex;
   align-items: center;
   justify-content: center;
   color: #fff; /* Overwritten by gradient overlay */
   text-align: center;
   padding: 0 1rem;
-}
-
-@media (min-width: 992px) {
-  .hero {
-    height: 600px;
-    min-height: initial;
-  }
 }
 
 .hero-background {
