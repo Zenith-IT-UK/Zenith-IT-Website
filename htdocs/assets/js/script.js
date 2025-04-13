@@ -114,8 +114,6 @@ document.addEventListener("DOMContentLoaded", function () {
   // Dark mode toggle script
   const darkModeToggleDesktop = document.getElementById("darkModeToggleDesktop");
   const darkModeToggleMobile = document.getElementById("darkModeToggleMobile");
-  const darkModeTextDesktop = document.getElementById("darkModeTextDesktop");
-  const darkModeTextMobile = document.getElementById("darkModeTextMobile");
   const body = document.body;
   const iconDesktop = darkModeToggleDesktop.querySelector("i");
   const iconMobile = darkModeToggleMobile.querySelector("i");
@@ -124,8 +122,6 @@ document.addEventListener("DOMContentLoaded", function () {
   if (localStorage.getItem("darkMode") === "enabled" || 
       (!localStorage.getItem("darkMode") && window.matchMedia("(prefers-color-scheme: dark)").matches)) {
     body.classList.add("dark-mode");
-    darkModeTextDesktop.textContent = "Day Mode";
-    darkModeTextMobile.textContent = "Day Mode";
     iconDesktop.classList.replace("fa-moon", "fa-sun");
     iconMobile.classList.replace("fa-moon", "fa-sun");
   }
@@ -134,14 +130,10 @@ document.addEventListener("DOMContentLoaded", function () {
     body.classList.toggle("dark-mode");
 
     if (body.classList.contains("dark-mode")) {
-      darkModeTextDesktop.textContent = "Day Mode";
-      darkModeTextMobile.textContent = "Day Mode";
       iconDesktop.classList.replace("fa-moon", "fa-sun");
       iconMobile.classList.replace("fa-moon", "fa-sun");
       localStorage.setItem("darkMode", "enabled");
     } else {
-      darkModeTextDesktop.textContent = "Night Mode";
-      darkModeTextMobile.textContent = "Night Mode";
       iconDesktop.classList.replace("fa-sun", "fa-moon");
       iconMobile.classList.replace("fa-sun", "fa-moon");
       localStorage.setItem("darkMode", "disabled");

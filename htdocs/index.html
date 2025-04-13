@@ -130,13 +130,7 @@
                 <i class="fa-solid fa-envelope"></i> Contact
               </a>
             </li>
-            <!-- Add Log In Button -->
-            <li class="nav-item">
-              <a class="btn btn-primary ms-lg-3" href="members/index.html" role="button">
-                <i class="fa-solid fa-user"></i> Log In
-              </a>
-            </li>
-            <!-- Legal Dropdown for Desktop -->
+            <!-- Re-add Legal Dropdown -->
             <li class="nav-item dropdown d-none d-lg-block">
               <a class="nav-link dropdown-toggle" href="#" id="legalDropdownDesktop" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 <i class="fa-solid fa-gavel me-2"></i> Legal
@@ -153,6 +147,12 @@
                   </a>
                 </li>
               </ul>
+            </li>
+            <!-- Add Log In Button -->
+            <li class="nav-item">
+              <a class="btn btn-primary ms-lg-3" href="members/index.html" role="button">
+                <i class="fa-solid fa-user"></i> Log In
+              </a>
             </li>
             <!-- Legal Dropdown for Mobile -->
             <li class="nav-item d-block d-lg-none">
@@ -174,17 +174,17 @@
                 </ul>
               </div>
             </li>
+            <!-- Dark Mode Toggle Button for Desktop -->
+            <button id="darkModeToggleDesktop" class="btn custom-dark-toggle btn-sm ms-3 d-none d-lg-block" aria-label="Toggle dark mode">
+              <i class="fa-solid fa-moon"></i>
+            </button>
             <!-- Dark Mode Toggle Button for Mobile -->
             <li class="nav-item d-block d-lg-none">
               <button id="darkModeToggleMobile" class="btn custom-dark-toggle w-100 mt-2" aria-label="Toggle dark mode">
-                <i class="fa-solid fa-moon"></i> <span id="darkModeTextMobile">Light Mode</span>
+                <i class="fa-solid fa-moon"></i>
               </button>
             </li>
           </ul>
-          <!-- Dark Mode Toggle Button for Desktop -->
-          <button id="darkModeToggleDesktop" class="btn custom-dark-toggle ms-3 d-none d-lg-block" aria-label="Toggle dark mode">
-            <i class="fa-solid fa-moon"></i> <span id="darkModeTextDesktop">Light Mode</span>
-          </button>
         </div>
       </div>
     </nav>
