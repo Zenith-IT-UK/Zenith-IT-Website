@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Members Only - Zenith IT</title>
+    <meta name="description" content="Exclusive content for members of Zenith IT." />
+    <!-- Bootstrap CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="../assets/css/main.css" />
+  </head>
+  <body>
+    <div id="auth-container" class="d-flex justify-content-center align-items-center vh-100">
+      <div class="card p-4 shadow" style="width: 100%; max-width: 400px;">
+        <h2 class="text-center mb-4">Members Only</h2>
+        <div id="auth-form">
+          <p class="text-muted text-center">Enter the password to access this page.</p>
+          <div class="mb-3">
+            <label for="password" class="form-label">Password</label>
+            <input type="password" id="password" class="form-control" placeholder="Enter password" />
+          </div>
+          <button id="login-btn" class="btn btn-primary w-100">Login</button>
+          <p id="error-msg" class="text-danger text-center mt-3 d-none">Incorrect password. Please try again.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="members-content" class="d-none">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="../index.html">Zenith IT</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html#services">Services</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="../index.html#contact">Contact</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <main class="container py-5">
+        <h1>Welcome, Member!</h1>
+        <p>This is exclusive content available only to members of Zenith IT.</p>
+        <p>Feel free to explore the resources and tools we have provided for you.</p>
+      </main>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../assets/js/members.js"></script>
+  </body>
+</html>
