@@ -16,15 +16,28 @@
   <body>
     <div id="auth-container" class="d-flex justify-content-center align-items-center vh-100">
       <div class="card p-4 shadow" style="width: 100%; max-width: 400px;">
+        <!-- Add Company Logo -->
+        <div class="text-center mb-4">
+          <img src="../assets/images/Logo/SVG/Logo/logo-color.svg" alt="Zenith IT Logo" height="50" />
+        </div>
         <h2 class="text-center mb-4">Members Only</h2>
         <div id="auth-form">
-          <p class="text-muted text-center">Enter the password to access this page.</p>
+          <p class="text-muted text-center">Enter your email and password to access this page.</p>
+          <!-- Add Email Entry Field -->
+          <div class="mb-3">
+            <label for="email" class="form-label">Email</label>
+            <input type="email" id="email" class="form-control" placeholder="Enter email" />
+          </div>
           <div class="mb-3">
             <label for="password" class="form-label">Password</label>
             <input type="password" id="password" class="form-control" placeholder="Enter password" />
           </div>
           <button id="login-btn" class="btn btn-primary w-100">Login</button>
-          <p id="error-msg" class="text-danger text-center mt-3 d-none">Incorrect password. Please try again.</p>
+          <p id="error-msg" class="text-danger text-center mt-3 d-none">Incorrect email or password. Please try again.</p>
+          <!-- Add Return to Main Website Button -->
+          <div class="text-center mt-3">
+            <a href="../index.html" class="btn btn-secondary w-100">Return to Main Website</a>
+          </div>
         </div>
       </div>
     </div>

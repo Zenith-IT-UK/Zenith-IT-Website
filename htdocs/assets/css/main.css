@@ -23,6 +23,7 @@ html {
   scroll-behavior: smooth; /* Smooth scroll for anchor links */
   /* Fix for anchor scrolling with a fixed navbar */
   scroll-padding-top: 70px;
+  height: 100%;
 }
 
 body {
@@ -33,6 +34,12 @@ body {
   padding: 0;
   transition: background-color var(--transition-speed) ease,
     color var(--transition-speed) ease;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
 }
 
 a {
@@ -453,9 +460,9 @@ section h2::after {
 */
 footer {
   background-color: var(--dark-grey);
+  color: var(--light-color);
   padding: 2rem 0;
   text-align: center;
-  color: var(--light-color);
   font-size: 0.8rem;
 }
 
