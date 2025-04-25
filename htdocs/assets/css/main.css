@@ -454,6 +454,17 @@ section h2::after {
   border-color: var(--brand-color);
 }
 
+/* Adjust form layout for new ticket page */
+#new-ticket-form {
+  max-width: 100%; /* Default full width for mobile */
+}
+
+@media (min-width: 992px) {
+  #new-ticket-form {
+    max-width: 600px; /* Reduce width for desktop devices */
+  }
+}
+
 /*
   FOOTER
   ---------------------------------------------------------------------------
